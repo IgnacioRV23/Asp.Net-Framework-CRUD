@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "22873828-8e70-4f6a-a0ca-80ea81627866": {
+      "ProjectGuid": "22873828-8e70-4f6a-a0ca-80ea81627866",
+      "DisplayName": "CRUD - Aplicación - Web",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}
