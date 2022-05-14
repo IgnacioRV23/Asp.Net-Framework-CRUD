@@ -56,3 +56,4 @@ C:\Users\admin\source\repos\CRUD - Aplicación - Web\obj\Debug\CRUD - Aplicació
 C:\Users\admin\source\repos\CRUD - Aplicación - Web\obj\Debug\CRUD - Aplicación - Web.csproj.CopyComplete
 C:\Users\admin\source\repos\CRUD - Aplicación - Web\obj\Debug\CRUD - Aplicación - Web.dll
 C:\Users\admin\source\repos\CRUD - Aplicación - Web\obj\Debug\CRUD - Aplicación - Web.pdb
+C:\Users\admin\source\repos\CRUD - Aplicación - Web\obj\Debug\CRUD - Aplicación - Web.csproj.AssemblyReference.cache

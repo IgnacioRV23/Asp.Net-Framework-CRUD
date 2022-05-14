@@ -52,7 +52,7 @@
 }
 
 
-/*Estilos para el botón que cierra sesión.*/
+/*Estilos para el botón de cerrar sesión.*/
 .btn_cerrar {
     color: #fff;
     display:block;
@@ -68,3 +68,36 @@ hr {
 }
 
 /*Apartado de estilos del formulario.*/
+.container_agregar {
+    margin:50px 350px;
+    padding:20px 50px;
+    border-radius:3px;
+    background-color:#c0c0c0;
+}
+
+table {
+    margin:auto;
+}
+
+caption {
+    margin:20px;
+    font-weight:bold;
+    font-size:larger;
+}
+
+td *{
+    margin: 20px 50px;
+}
+
+.btn_agregar {
+    color:#fff;
+    margin:auto;
+    width:200px;
+    display:block;
+    cursor:pointer;
+    margin-top:10px;
+    padding:10px 15px;
+    border-radius:3px;
+    margin-bottom:10px;
+    background-color:#000;
+}

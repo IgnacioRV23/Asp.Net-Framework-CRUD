@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Productos</title>
     <link href="../css/gestionAdmin.css" rel="stylesheet" />
     <link href="../src/favicon.svg" rel="icon" />
@@ -39,23 +39,46 @@
         <hr />
 
         <div class="container_agregar">
-            <h2>Agregar producto</h2>
+            <h2 class="titulo_formulario">Agregar productos</h2>
 
-            <p>Nombre:</p>
-            <asp:TextBox runat="server" ID="txtNombre" CssClass="campo_texto"/>
+            <table>
+                <caption>Datos del producto</caption>
+                <tr>
+                    <td>
+                        <p>Nombre:</p>
+                    </td>
+                    <td>
+                        <asp:TextBox runat="server" ID="txtNombre" CssClass="campo_texto" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Cantidad:</p>
+                    </td>
+                    <td>
+                        <asp:TextBox runat="server" TextMode="Number" ID="txtCantidad" CssClass="campo_texto" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Precio:</p>
+                    </td>
+                    <td>
+                        <asp:TextBox runat="server" TextMode="Number" ID="txtPrecio" CssClass="campo_texto" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Proveedor:</p>
+                    </td>
+                    <td>
+                        <asp:TextBox runat="server" ID="txtProveedor" CssClass="campo_texto" />
+                    </td>
+                </tr>
+            </table>
 
-            <p>Cantidad:</p>
-            <asp:TextBox runat="server" TextMode="Number" ID="txtCantidad" CssClass="campo_texto"/>
-            
-            <p>Precio:</p>
-            <asp:TextBox runat="server" TextMode="Number" ID="txtPrecio" CssClass="campo_texto"/>
-            
-            <p>Proveedor:</p>
-            <asp:TextBox runat="server" ID="txtProveedor" CssClass="campo_texto"/>
-
-            <asp:Label Text="Mensaje: " runat="server" />
-
-            <asp:Button Text="Agregar" runat="server" />
+            <asp:Button Text="Agregar" runat="server" ID="txtAgregar" CssClass="btn_agregar" />
+            <asp:Label Text="Resultado: " runat="server" ID="lblResultado" CssClass="lbl_resultado" Font-Bold="true"/>
         </div>
     </form>
 </body>
