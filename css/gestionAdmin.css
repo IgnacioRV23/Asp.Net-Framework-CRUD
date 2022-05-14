@@ -7,16 +7,12 @@
     grid-template-columns: min-content 68% max-content max-content;
 }
 
-
-
 .imagen_logo {
     margin-top: 20px;
     margin-right: 10px;
 }
 
-
 /*Apartado que le da estilos al dropDown de usuarios*/
-
 .titulo_dropDown {
     color: #fff;
     cursor:pointer;
@@ -50,7 +46,6 @@
 .dropDown:hover .container_lista {
   display: block;
 }
-
 
 /*Estilos para el botón de cerrar sesión.*/
 .btn_cerrar {
@@ -89,15 +84,17 @@ td *{
     margin: 20px 50px;
 }
 
-.btn_agregar {
+.container_botones {
+    text-align:center;
+    margin-top:30px;
+    margin-bottom:30px;
+}
+
+.btn_admin {
     color:#fff;
-    margin:auto;
-    width:200px;
-    display:block;
+    width:150px;
     cursor:pointer;
-    margin-top:10px;
     padding:10px 15px;
     border-radius:3px;
-    margin-bottom:10px;
     background-color:#000;
 }

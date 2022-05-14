@@ -77,9 +77,19 @@
                 </tr>
             </table>
 
-            <asp:Button Text="Agregar" runat="server" ID="txtAgregar" CssClass="btn_agregar" />
-            <asp:Label Text="Resultado: " runat="server" ID="lblResultado" CssClass="lbl_resultado" Font-Bold="true"/>
+            <section class="container_botones">
+                <asp:Button Text="Agregar" runat="server" ID="btnAgregar" CssClass="btn_admin" />
+
+                <asp:Button Text="Actualizar" runat="server" ID="btnActualizar" CssClass="btn_admin" />
+
+                <asp:Button Text="Eliminar" runat="server" ID="btnEliminar" CssClass="btn_admin" />
+            </section>
+
+            <asp:Label Text="Resultado: " runat="server" ID="lblResultado" CssClass="lbl_resultado" Font-Bold="true" />
         </div>
+
+        <asp:GridView runat="server" ID="gridProductos">
+        </asp:GridView>
     </form>
 </body>
 </html>
