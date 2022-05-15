@@ -1,0 +1,40 @@
+﻿body {
+}
+
+.container_crearUsuario {
+    width: 500px;
+    margin: auto;
+    margin-top: 100px;
+    padding-top: 30px;
+    text-align: center;
+    padding-bottom: 30px;
+    background-color: #c0c0c0;
+}
+
+.container_crearUsuario *{
+    display:block;
+    margin:auto;
+}
+
+h2 {
+
+}
+
+.campo_texto {
+    margin-top:30px;
+    margin-bottom:30px;
+}
+
+.mensaje {
+    margin-bottom: 30px;
+}
+
+.btn_crearUsuario {
+    color: #fff;
+    width: 180px;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #000;
+}

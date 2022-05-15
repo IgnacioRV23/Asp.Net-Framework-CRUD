@@ -5,6 +5,11 @@
       "ProjectGuid": "22873828-8e70-4f6a-a0ca-80ea81627866",
       "DisplayName": "CRUD - Aplicación - Web",
       "ColorIndex": 0
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Archivos varios",
+      "ColorIndex": -1
     }
   },
   "NextColorIndex": 1

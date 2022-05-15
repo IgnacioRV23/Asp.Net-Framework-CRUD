@@ -1,7 +1,7 @@
-﻿using System;
+﻿using CRUD___Aplicación___Web.Model;
+using System;
 using System.Linq;
 using System.Web.UI.WebControls;
-using CRUD___Aplicación___Web.Model;
 
 namespace CRUD___Aplicación___Web.Forms
 {
@@ -150,7 +150,8 @@ namespace CRUD___Aplicación___Web.Forms
                 btnSi.Visible = true;
                 btnNo.Visible = true;
                 btnAgregar.Visible = false;
-            } else
+            }
+            else
             {
                 mensaje = "Resultado: No se ha seleccionado ningún registro.";
                 lblResultado.Text = mensaje;
