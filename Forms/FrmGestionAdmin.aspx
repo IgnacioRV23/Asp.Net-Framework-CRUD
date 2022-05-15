@@ -82,10 +82,13 @@
 
                 <asp:Button Text="Actualizar" runat="server" ID="btnActualizar" CssClass="btn_admin" OnClick="btnActualizar_Click"/>
 
-                <asp:Button Text="Eliminar" runat="server" ID="btnEliminar" CssClass="btn_admin" />
+                <asp:Button Text="Eliminar" runat="server" ID="btnEliminar" CssClass="btn_admin" OnClick="btnEliminar_Click"/>
             </section>
 
             <asp:Label Text="Resultado: " runat="server" ID="lblResultado" CssClass="lbl_resultado" Font-Bold="true" />
+
+                <asp:Button Text="Si" runat="server" CssClass="btn_pregunta btn_si" Visible="False" ID="btnSi" OnClick="btnSi_Click"/>
+                <asp:Button Text="No" runat="server" CssClass="btn_pregunta btn_no" Visible="False" ID="btnNo" OnClick="btnNo_Click"/>
         </div>
 
         <asp:GridView runat="server" ID="gridProductos" AutoGenerateSelectButton="True" OnSelectedIndexChanged="gridProductos_SelectedIndexChanged">

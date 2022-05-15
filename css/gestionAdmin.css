@@ -104,3 +104,22 @@ td *{
     border-radius:3px;
     background-color:#000;
 }
+
+.btn_pregunta {
+    float:right;
+    cursor:pointer;
+    border-radius:3px;
+    margin-right: 40px;
+}
+
+.btn_si {
+    color: #fff;
+    border-color: #00B000;
+    background-color: #00B000;
+}
+
+.btn_no {
+    color: #fff;
+    border-color: #f00;
+    background-color: #f00;
+}

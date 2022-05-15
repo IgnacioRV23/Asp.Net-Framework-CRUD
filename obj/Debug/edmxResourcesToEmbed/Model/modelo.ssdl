@@ -23,6 +23,9 @@
     <Parameter Name="precio" Type="float" Mode="In" />
     <Parameter Name="proveedor" Type="varchar" Mode="In" />
   </Function>
+  <Function Name="eliminarProducto" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+  </Function>
   <EntityContainer Name="DB_ProductosModelStoreContainer">
     <EntitySet Name="Productos" EntityType="Self.Productos" Schema="dbo" store:Type="Tables" />
   </EntityContainer>

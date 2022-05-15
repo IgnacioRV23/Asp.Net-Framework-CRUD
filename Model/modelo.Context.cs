@@ -74,5 +74,14 @@ namespace CRUD___Aplicación___Web.Model
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("actualizarProducto", idParameter, nombreParameter, cantidadParameter, precioParameter, proveedorParameter);
         }
+    
+        public virtual int eliminarProducto(Nullable<int> id)
+        {
+            var idParameter = id.HasValue ?
+                new ObjectParameter("id", id) :
+                new ObjectParameter("id", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("eliminarProducto", idParameter);
+        }
     }
 }

@@ -25,5 +25,8 @@
       <Parameter Name="precio" Mode="In" Type="Double" />
       <Parameter Name="proveedor" Mode="In" Type="String" />
     </FunctionImport>
+    <FunctionImport Name="eliminarProducto">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+    </FunctionImport>
   </EntityContainer>
 </Schema>
