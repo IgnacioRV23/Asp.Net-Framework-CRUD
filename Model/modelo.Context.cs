@@ -12,6 +12,8 @@ namespace CRUD___Aplicación___Web.Model
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
+    using System.Data.Entity.Core.Objects;
+    using System.Linq;
     
     public partial class DB_ProductosEntities : DbContext
     {
@@ -26,5 +28,51 @@ namespace CRUD___Aplicación___Web.Model
         }
     
         public virtual DbSet<Productos> Productos { get; set; }
+    
+        public virtual int AgregarProducto(string nombre, Nullable<int> cantidad, Nullable<double> precio, string proveedor)
+        {
+            var nombreParameter = nombre != null ?
+                new ObjectParameter("nombre", nombre) :
+                new ObjectParameter("nombre", typeof(string));
+    
+            var cantidadParameter = cantidad.HasValue ?
+                new ObjectParameter("cantidad", cantidad) :
+                new ObjectParameter("cantidad", typeof(int));
+    
+            var precioParameter = precio.HasValue ?
+                new ObjectParameter("precio", precio) :
+                new ObjectParameter("precio", typeof(double));
+    
+            var proveedorParameter = proveedor != null ?
+                new ObjectParameter("proveedor", proveedor) :
+                new ObjectParameter("proveedor", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("AgregarProducto", nombreParameter, cantidadParameter, precioParameter, proveedorParameter);
+        }
+    
+        public virtual int actualizarProducto(Nullable<int> id, string nombre, Nullable<int> cantidad, Nullable<double> precio, string proveedor)
+        {
+            var idParameter = id.HasValue ?
+                new ObjectParameter("id", id) :
+                new ObjectParameter("id", typeof(int));
+    
+            var nombreParameter = nombre != null ?
+                new ObjectParameter("nombre", nombre) :
+                new ObjectParameter("nombre", typeof(string));
+    
+            var cantidadParameter = cantidad.HasValue ?
+                new ObjectParameter("cantidad", cantidad) :
+                new ObjectParameter("cantidad", typeof(int));
+    
+            var precioParameter = precio.HasValue ?
+                new ObjectParameter("precio", precio) :
+                new ObjectParameter("precio", typeof(double));
+    
+            var proveedorParameter = proveedor != null ?
+                new ObjectParameter("proveedor", proveedor) :
+                new ObjectParameter("proveedor", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("actualizarProducto", idParameter, nombreParameter, cantidadParameter, precioParameter, proveedorParameter);
+        }
     }
 }

@@ -84,6 +84,12 @@ td *{
     margin: 20px 50px;
 }
 
+.campo_texto {
+    outline:none;
+    padding:initial 5px;
+    border:1px solid #000;
+}
+
 .container_botones {
     text-align:center;
     margin-top:30px;

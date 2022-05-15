@@ -12,5 +12,7 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="AgregarProducto" FunctionName="DB_ProductosModel.Store.AgregarProducto" />
+    <FunctionImportMapping FunctionImportName="actualizarProducto" FunctionName="DB_ProductosModel.Store.actualizarProducto" />
   </EntityContainerMapping>
 </Mapping>

@@ -12,5 +12,18 @@
   </EntityType>
   <EntityContainer Name="DB_ProductosEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="Productos" EntityType="Self.Productos" />
+    <FunctionImport Name="AgregarProducto">
+      <Parameter Name="nombre" Mode="In" Type="String" />
+      <Parameter Name="cantidad" Mode="In" Type="Int32" />
+      <Parameter Name="precio" Mode="In" Type="Double" />
+      <Parameter Name="proveedor" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="actualizarProducto">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+      <Parameter Name="nombre" Mode="In" Type="String" />
+      <Parameter Name="cantidad" Mode="In" Type="Int32" />
+      <Parameter Name="precio" Mode="In" Type="Double" />
+      <Parameter Name="proveedor" Mode="In" Type="String" />
+    </FunctionImport>
   </EntityContainer>
 </Schema>
