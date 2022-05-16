@@ -136,6 +136,9 @@
     <Compile Include="Model\Productos.cs">
       <DependentUpon>modelo.tt</DependentUpon>
     </Compile>
+    <Compile Include="Model\Usuarios.cs">
+      <DependentUpon>modelo.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

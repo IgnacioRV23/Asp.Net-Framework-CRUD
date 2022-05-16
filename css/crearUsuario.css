@@ -23,9 +23,16 @@ h2 {
 .campo_texto {
     margin-top:30px;
     margin-bottom:30px;
+    outline:none;
+}
+
+.dropDown {
+    outline:none;
+    width:180px;
 }
 
 .mensaje {
+    margin-top: 30px;
     margin-bottom: 30px;
 }
 

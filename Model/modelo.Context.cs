@@ -28,6 +28,7 @@ namespace CRUD___Aplicación___Web.Model
         }
     
         public virtual DbSet<Productos> Productos { get; set; }
+        public virtual DbSet<Usuarios> Usuarios { get; set; }
     
         public virtual int AgregarProducto(string nombre, Nullable<int> cantidad, Nullable<double> precio, string proveedor)
         {
@@ -82,6 +83,31 @@ namespace CRUD___Aplicación___Web.Model
                 new ObjectParameter("id", typeof(int));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("eliminarProducto", idParameter);
+        }
+    
+        public virtual int agregarUsuario(string nombre, string correo, string usuario, string contrasenia, Nullable<int> rol)
+        {
+            var nombreParameter = nombre != null ?
+                new ObjectParameter("nombre", nombre) :
+                new ObjectParameter("nombre", typeof(string));
+    
+            var correoParameter = correo != null ?
+                new ObjectParameter("correo", correo) :
+                new ObjectParameter("correo", typeof(string));
+    
+            var usuarioParameter = usuario != null ?
+                new ObjectParameter("usuario", usuario) :
+                new ObjectParameter("usuario", typeof(string));
+    
+            var contraseniaParameter = contrasenia != null ?
+                new ObjectParameter("contrasenia", contrasenia) :
+                new ObjectParameter("contrasenia", typeof(string));
+    
+            var rolParameter = rol.HasValue ?
+                new ObjectParameter("rol", rol) :
+                new ObjectParameter("rol", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("agregarUsuario", nombreParameter, correoParameter, usuarioParameter, contraseniaParameter, rolParameter);
         }
     }
 }

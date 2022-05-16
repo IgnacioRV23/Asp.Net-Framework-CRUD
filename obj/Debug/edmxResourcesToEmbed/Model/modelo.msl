@@ -15,5 +15,18 @@
     <FunctionImportMapping FunctionImportName="AgregarProducto" FunctionName="DB_ProductosModel.Store.AgregarProducto" />
     <FunctionImportMapping FunctionImportName="actualizarProducto" FunctionName="DB_ProductosModel.Store.actualizarProducto" />
     <FunctionImportMapping FunctionImportName="eliminarProducto" FunctionName="DB_ProductosModel.Store.eliminarProducto" />
+    <EntitySetMapping Name="Usuarios">
+      <EntityTypeMapping TypeName="DB_ProductosModel.Usuarios">
+        <MappingFragment StoreEntitySet="Usuarios">
+          <ScalarProperty Name="rol" ColumnName="rol" />
+          <ScalarProperty Name="contrasenia" ColumnName="contrasenia" />
+          <ScalarProperty Name="usuario" ColumnName="usuario" />
+          <ScalarProperty Name="correo" ColumnName="correo" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="agregarUsuario" FunctionName="DB_ProductosModel.Store.agregarUsuario" />
   </EntityContainerMapping>
 </Mapping>

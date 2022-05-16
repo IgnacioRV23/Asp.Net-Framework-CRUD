@@ -20,9 +20,16 @@
                 <asp:TextBox runat="server" CssClass="campo_texto" ID="txtUsuario" placeholder="Usuario"/>
                 <asp:TextBox runat="server" CssClass="campo_texto" ID="txtContrasenia" placeholder="Contraseña"/>
 
-                <asp:Label Text="Mensaje" runat="server" CssClass="mensaje"/>
+                <asp:DropDownList runat="server" CssClass="dropDown" ID="dropUsuario">
+                    <asp:ListItem Text="Rol de usuario" />
+                    <asp:ListItem Text="Administrador" />
+                    <asp:ListItem Text="Editor"/>
+                    <asp:ListItem Text="Lector" />
+                </asp:DropDownList>
 
-                <asp:Button Text="Aceptar" runat="server" CssClass="btn_crearUsuario" ID="btnCrearUsuario"/>
+                <asp:Label Text="Mensaje:" runat="server" CssClass="mensaje" ID="lblMensaje"/>
+
+                <asp:Button Text="Aceptar" runat="server" CssClass="btn_crearUsuario" ID="btnCrearUsuario" OnClick="btnCrearUsuario_Click"/>
             </div>
         </div>
     </form>

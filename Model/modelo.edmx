@@ -15,6 +15,17 @@
           <Property Name="precio" Type="float" Nullable="false" />
           <Property Name="proveedor" Type="varchar" MaxLength="50" Nullable="false" />
         </EntityType>
+        <EntityType Name="Usuarios">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nombre" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="correo" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="usuario" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="contrasenia" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="rol" Type="int" Nullable="false" />
+        </EntityType>
         <Function Name="actualizarProducto" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="id" Type="int" Mode="In" />
           <Parameter Name="nombre" Type="varchar" Mode="In" />
@@ -28,11 +39,19 @@
           <Parameter Name="precio" Type="float" Mode="In" />
           <Parameter Name="proveedor" Type="varchar" Mode="In" />
         </Function>
+        <Function Name="agregarUsuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="nombre" Type="varchar" Mode="In" />
+          <Parameter Name="correo" Type="varchar" Mode="In" />
+          <Parameter Name="usuario" Type="varchar" Mode="In" />
+          <Parameter Name="contrasenia" Type="varchar" Mode="In" />
+          <Parameter Name="rol" Type="int" Mode="In" />
+        </Function>
         <Function Name="eliminarProducto" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="id" Type="int" Mode="In" />
         </Function>
         <EntityContainer Name="DB_ProductosModelStoreContainer">
           <EntitySet Name="Productos" EntityType="Self.Productos" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Usuarios" EntityType="Self.Usuarios" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
@@ -64,9 +83,28 @@
             <Parameter Name="proveedor" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="eliminarProducto">
-            <Parameter Name="id" Mode="In" Type="Int32" />
+          <Parameter Name="id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <EntitySet Name="Usuarios" EntityType="DB_ProductosModel.Usuarios" />
+          <FunctionImport Name="agregarUsuario">
+            <Parameter Name="nombre" Mode="In" Type="String" />
+            <Parameter Name="correo" Mode="In" Type="String" />
+            <Parameter Name="usuario" Mode="In" Type="String" />
+            <Parameter Name="contrasenia" Mode="In" Type="String" />
+            <Parameter Name="rol" Mode="In" Type="Int32" />
           </FunctionImport>
         </EntityContainer>
+        <EntityType Name="Usuarios">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nombre" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="correo" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="usuario" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="contrasenia" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="rol" Type="Int32" Nullable="false" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -87,6 +125,19 @@
           <FunctionImportMapping FunctionImportName="AgregarProducto" FunctionName="DB_ProductosModel.Store.AgregarProducto" />
           <FunctionImportMapping FunctionImportName="actualizarProducto" FunctionName="DB_ProductosModel.Store.actualizarProducto" />
           <FunctionImportMapping FunctionImportName="eliminarProducto" FunctionName="DB_ProductosModel.Store.eliminarProducto" />
+          <EntitySetMapping Name="Usuarios">
+            <EntityTypeMapping TypeName="DB_ProductosModel.Usuarios">
+              <MappingFragment StoreEntitySet="Usuarios">
+                <ScalarProperty Name="rol" ColumnName="rol" />
+                <ScalarProperty Name="contrasenia" ColumnName="contrasenia" />
+                <ScalarProperty Name="usuario" ColumnName="usuario" />
+                <ScalarProperty Name="correo" ColumnName="correo" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="agregarUsuario" FunctionName="DB_ProductosModel.Store.agregarUsuario" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
