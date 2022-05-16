@@ -192,5 +192,12 @@ namespace CRUD___Aplicación___Web.Forms
                 lblResultado.Text = mensaje;
             }
         }
+
+        //Evento que permite la paginación del gridView.
+        protected void gridProductos_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            gridProductos.PageIndex = e.NewPageIndex;
+            cargaTabla();
+        }
     }
 }

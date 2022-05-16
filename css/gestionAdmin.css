@@ -123,3 +123,12 @@ td *{
     border-color: #f00;
     background-color: #f00;
 }
+
+.titulo_grid {
+    width:max-content;
+    margin:10px auto;
+}
+
+.container_grid {
+    margin-bottom:50px;
+}

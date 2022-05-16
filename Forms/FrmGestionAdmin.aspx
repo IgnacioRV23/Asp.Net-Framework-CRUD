@@ -78,21 +78,30 @@
             </table>
 
             <section class="container_botones">
-                <asp:Button Text="Agregar" runat="server" ID="btnAgregar" CssClass="btn_admin" OnClick="btnAgregar_Click"/>
+                <asp:Button Text="Agregar" runat="server" ID="btnAgregar" CssClass="btn_admin" OnClick="btnAgregar_Click" />
 
-                <asp:Button Text="Actualizar" runat="server" ID="btnActualizar" CssClass="btn_admin" OnClick="btnActualizar_Click"/>
+                <asp:Button Text="Actualizar" runat="server" ID="btnActualizar" CssClass="btn_admin" OnClick="btnActualizar_Click" />
 
-                <asp:Button Text="Eliminar" runat="server" ID="btnEliminar" CssClass="btn_admin" OnClick="btnEliminar_Click"/>
+                <asp:Button Text="Eliminar" runat="server" ID="btnEliminar" CssClass="btn_admin" OnClick="btnEliminar_Click" />
             </section>
 
             <asp:Label Text="Resultado: " runat="server" ID="lblResultado" CssClass="lbl_resultado" Font-Bold="true" />
 
-                <asp:Button Text="Si" runat="server" CssClass="btn_pregunta btn_si" Visible="False" ID="btnSi" OnClick="btnSi_Click"/>
-                <asp:Button Text="No" runat="server" CssClass="btn_pregunta btn_no" Visible="False" ID="btnNo" OnClick="btnNo_Click"/>
+            <asp:Button Text="Si" runat="server" CssClass="btn_pregunta btn_si" Visible="False" ID="btnSi" OnClick="btnSi_Click" />
+            <asp:Button Text="No" runat="server" CssClass="btn_pregunta btn_no" Visible="False" ID="btnNo" OnClick="btnNo_Click" />
         </div>
 
-        <asp:GridView runat="server" ID="gridProductos" AutoGenerateSelectButton="True" OnSelectedIndexChanged="gridProductos_SelectedIndexChanged">
+        <h2 class="titulo_grid">Lista de productos</h2>
+
+        <div class="container_grid">
+            <asp:GridView runat="server" ID="gridProductos" AutoGenerateSelectButton="True" OnSelectedIndexChanged="gridProductos_SelectedIndexChanged" RowStyle-HorizontalAlign="Center" CellPadding="15" AllowPaging="True" BackColor="White" BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px" ForeColor="Black" GridLines="Vertical" PageSize="8" OnPageIndexChanging="gridProductos_PageIndexChanging">
+            <AlternatingRowStyle BackColor="#C0C0C0" />
+            <FooterStyle BackColor="#CCCCCC" />
+            <HeaderStyle BackColor="Black" ForeColor="White" Font-Bold="True" />
+            <PagerStyle BackColor="#999999" ForeColor="Black" HorizontalAlign="Center" Wrap="True" />
+            <RowStyle HorizontalAlign="Center"></RowStyle> 
         </asp:GridView>
+        </div>
     </form>
 </body>
 </html>
