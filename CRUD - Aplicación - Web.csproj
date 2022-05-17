@@ -77,9 +77,11 @@
   <ItemGroup>
     <Content Include="css\crearUsuario.css" />
     <Content Include="css\gestionAdmin.css" />
+    <Content Include="css\gestionEditor.css" />
     <Content Include="css\login.css" />
     <Content Include="Forms\FrmCrearUsuario.aspx" />
     <Content Include="Forms\FrmGestionAdmin.aspx" />
+    <Content Include="Forms\FrmGestionEditor.aspx" />
     <Content Include="Forms\FrmLogin.aspx" />
     <Content Include="Model\modelo.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -110,6 +112,13 @@
     </Compile>
     <Compile Include="Forms\FrmGestionAdmin.aspx.designer.cs">
       <DependentUpon>FrmGestionAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmGestionEditor.aspx.cs">
+      <DependentUpon>FrmGestionEditor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmGestionEditor.aspx.designer.cs">
+      <DependentUpon>FrmGestionEditor.aspx</DependentUpon>
     </Compile>
     <Compile Include="Forms\FrmLogin.aspx.cs">
       <DependentUpon>FrmLogin.aspx</DependentUpon>

@@ -15,11 +15,11 @@
 /*Apartado que le da estilos al dropDown de usuarios*/
 .titulo_dropDown {
     color: #fff;
-    cursor:pointer;
+    cursor: pointer;
     display: block;
     border-radius: 5px;
     background-color: #000;
-    margin:15px 35px 2px 35px;
+    margin: 15px 35px 2px 35px;
     padding: 10px 30px 10px 30px;
 }
 
@@ -27,31 +27,31 @@
     z-index: 1;
     display: none;
     margin-left: 35px;
-    border-radius:3px;
+    border-radius: 3px;
     position: absolute;
     background-color: #000;
 }
 
 .container_lista a {
-  color:#fff;
-  padding: 18px;
-  display: block;
-  text-decoration:none;
+    color: #fff;
+    padding: 18px;
+    display: block;
+    text-decoration: none;
 }
 
-.container_lista a:hover{
-  text-decoration:underline;
+.container_lista a:hover {
+    text-decoration: underline;
 }
 
 .dropDown:hover .container_lista {
-  display: block;
+    display: block;
 }
 
 /*Estilos para el botón de cerrar sesión.*/
 .btn_cerrar {
     color: #fff;
-    display:block;
-    margin-top:15px;
+    display: block;
+    margin-top: 15px;
     border-radius: 5px;
     text-decoration: none;
     background-color: #000;
@@ -64,10 +64,10 @@ hr {
 
 /*Apartado de estilos del formulario.*/
 .container_agregar {
-    margin:0px 350px 30px;
-    padding:20px 50px;
-    border-radius:3px;
-    background-color:#c0c0c0;
+    margin: 0px 350px 50px;
+    padding: 20px 50px;
+    border-radius: 3px;
+    background-color: #c0c0c0;
 }
 
 .titulo_formulario {
@@ -76,64 +76,45 @@ hr {
 }
 
 table {
-    margin:auto;
+    margin: auto;
 }
 
 caption {
-    margin:20px;
-    font-weight:bold;
-    font-size:larger;
+    margin: 20px;
+    font-weight: bold;
+    font-size: larger;
 }
 
-td *{
+td * {
     margin: 20px 50px;
 }
 
 .campo_texto {
-    outline:none;
-    padding:initial 5px;
-    border:1px solid #000;
+    outline: none;
+    padding: initial 5px;
+    border: 1px solid #000;
 }
 
 .container_botones {
-    text-align:center;
-    margin-top:30px;
-    margin-bottom:30px;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
-.btn_admin {
-    color:#fff;
-    width:150px;
-    cursor:pointer;
-    padding:10px 15px;
-    border-radius:3px;
-    background-color:#000;
-}
-
-.btn_pregunta {
-    float:right;
-    cursor:pointer;
-    border-radius:3px;
-    margin-right: 40px;
-}
-
-.btn_si {
+.btn_lector {
     color: #fff;
-    border-color: #00B000;
-    background-color: #00B000;
-}
-
-.btn_no {
-    color: #fff;
-    border-color: #f00;
-    background-color: #f00;
+    width: 150px;
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 3px;
+    background-color: #000;
 }
 
 .titulo_grid {
-    width:max-content;
-    margin:10px auto;
+    width: max-content;
+    margin: 10px auto;
 }
 
 .container_grid {
-    margin-bottom:50px;
+    margin-bottom: 50px;
 }

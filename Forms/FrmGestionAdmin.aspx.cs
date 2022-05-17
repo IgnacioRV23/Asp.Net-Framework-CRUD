@@ -32,12 +32,18 @@ namespace CRUD___Aplicación___Web.Forms
         //Método encargado de extraer los datos de la BD y colocarlos en el gridView.
         private void cargaTabla()
         {
-            using (DB_ProductosEntities context = new DB_ProductosEntities())
+            try
             {
-                var data = context.Productos.ToList();
+                using (DB_ProductosEntities context = new DB_ProductosEntities())
+                {
+                    var data = context.Productos.ToList();
 
-                gridProductos.DataSource = data;
-                gridProductos.DataBind();
+                    gridProductos.DataSource = data;
+                    gridProductos.DataBind();
+                }
+            } catch (Exception ex)
+            {
+                lblResultado.Text = "Error: " + ex.ToString();
             }
         }
 
@@ -65,6 +71,13 @@ namespace CRUD___Aplicación___Web.Forms
 
             mensaje = "Resultado: Registro seleccionado.";
             lblResultado.Text = mensaje;
+        }
+
+        //Evento que permite la paginación del gridView.
+        protected void gridProductos_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            gridProductos.PageIndex = e.NewPageIndex;
+            cargaTabla();
         }
 
         //Método encargado de agregar productos a la base de datos.
@@ -191,13 +204,6 @@ namespace CRUD___Aplicación___Web.Forms
                 mensaje = "Resultado: Ha ocurrido un error";
                 lblResultado.Text = mensaje;
             }
-        }
-
-        //Evento que permite la paginación del gridView.
-        protected void gridProductos_PageIndexChanging(object sender, GridViewPageEventArgs e)
-        {
-            gridProductos.PageIndex = e.NewPageIndex;
-            cargaTabla();
         }
     }
 }

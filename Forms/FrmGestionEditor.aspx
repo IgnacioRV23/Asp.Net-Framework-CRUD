@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="FrmGestionAdmin.aspx.cs" Inherits="CRUD___Aplicación___Web.Forms.FrmGestionAdministrador" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="FrmGestionEditor.aspx.cs" Inherits="CRUD___Aplicación___Web.Forms.FrmGestionEditor" %>
 
 <!DOCTYPE html>
 
@@ -6,8 +6,8 @@
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Productos</title>
-    <link href="../css/gestionAdmin.css" rel="stylesheet" />
     <link href="../src/favicon.svg" rel="icon" />
+    <link href="../css/gestionEditor.css" rel="stylesheet" />
 </head>
 <body>
     <form id="frm1" runat="server">
@@ -17,7 +17,7 @@
             </div>
 
             <div>
-                <h2 class="titulo_barra">Sistema de gestión - admin</h2>
+                <h2 class="titulo_barra">Sistema de gestión - lector</h2>
             </div>
 
             <div class="dropDown">
@@ -38,7 +38,7 @@
 
         <hr />
 
-        <h2 class="titulo_formulario">Registro y modificación de productos</h2>
+        <h2 class="titulo_formulario">Modificar productos</h2>
 
         <div class="container_agregar">
 
@@ -79,23 +79,16 @@
             </table>
 
             <section class="container_botones">
-                <asp:Button Text="Agregar" runat="server" ID="btnAgregar" CssClass="btn_admin" OnClick="btnAgregar_Click" />
-
-                <asp:Button Text="Actualizar" runat="server" ID="btnActualizar" CssClass="btn_admin" OnClick="btnActualizar_Click" />
-
-                <asp:Button Text="Eliminar" runat="server" ID="btnEliminar" CssClass="btn_admin" OnClick="btnEliminar_Click" />
+                <asp:Button Text="Actualizar" runat="server" ID="btnActualizar" CssClass="btn_lector" OnClick="btnActualizar_Click"/>
             </section>
 
             <asp:Label Text="Resultado: " runat="server" ID="lblResultado" CssClass="lbl_resultado" Font-Bold="true" />
-
-            <asp:Button Text="Si" runat="server" CssClass="btn_pregunta btn_si" Visible="False" ID="btnSi" OnClick="btnSi_Click" />
-            <asp:Button Text="No" runat="server" CssClass="btn_pregunta btn_no" Visible="False" ID="btnNo" OnClick="btnNo_Click" />
         </div>
 
         <h2 class="titulo_grid">Lista de productos</h2>
 
         <div class="container_grid">
-            <asp:GridView runat="server" ID="gridProductos" AutoGenerateSelectButton="True" OnSelectedIndexChanged="gridProductos_SelectedIndexChanged" RowStyle-HorizontalAlign="Center" CellPadding="15" AllowPaging="True" BackColor="White" BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px" ForeColor="Black" GridLines="Vertical" PageSize="8" OnPageIndexChanging="gridProductos_PageIndexChanging">
+            <asp:GridView runat="server" ID="gridProductos" AutoGenerateSelectButton="True" RowStyle-HorizontalAlign="Center" CellPadding="15" AllowPaging="True" BackColor="White" BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px" ForeColor="Black" GridLines="Vertical" PageSize="8" OnSelectedIndexChanged="gridProductos_SelectedIndexChanged" OnPageIndexChanging="gridProductos_PageIndexChanging">
                 <AlternatingRowStyle BackColor="#C0C0C0" />
                 <FooterStyle BackColor="#CCCCCC" />
                 <HeaderStyle BackColor="Black" ForeColor="White" Font-Bold="True" />
