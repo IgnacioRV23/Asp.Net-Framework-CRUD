@@ -46,6 +46,11 @@
           <Parameter Name="contrasenia" Type="varchar" Mode="In" />
           <Parameter Name="rol" Type="int" Mode="In" />
         </Function>
+        <Function Name="cambiaContrasenia" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="usuario" Type="varchar" Mode="In" />
+          <Parameter Name="correo" Type="varchar" Mode="In" />
+          <Parameter Name="contrasenia" Type="varchar" Mode="In" />
+        </Function>
         <Function Name="eliminarProducto" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="id" Type="int" Mode="In" />
         </Function>
@@ -93,6 +98,11 @@
             <Parameter Name="contrasenia" Mode="In" Type="String" />
             <Parameter Name="rol" Mode="In" Type="Int32" />
           </FunctionImport>
+          <FunctionImport Name="cambiaContrasenia">
+            <Parameter Name="usuario" Mode="In" Type="String" />
+            <Parameter Name="correo" Mode="In" Type="String" />
+            <Parameter Name="contrasenia" Mode="In" Type="String" />
+          </FunctionImport>
         </EntityContainer>
         <EntityType Name="Usuarios">
           <Key>
@@ -138,6 +148,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <FunctionImportMapping FunctionImportName="agregarUsuario" FunctionName="DB_ProductosModel.Store.agregarUsuario" />
+          <FunctionImportMapping FunctionImportName="cambiaContrasenia" FunctionName="DB_ProductosModel.Store.cambiaContrasenia" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

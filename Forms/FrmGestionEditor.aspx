@@ -26,8 +26,8 @@
                 <div class="container_lista">
                     <a href="#">Crear usuario</a>
                     <a href="#">Eliminar usuario</a>
-                    <a href="#">Recuperar contraseña</a>
-                    <a href="#">Actualizar información</a>
+                    <a href="#">Recuperar usuario</a>
+                    <a href="#">Actualizar usuario</a>
                 </div>
             </div>
 

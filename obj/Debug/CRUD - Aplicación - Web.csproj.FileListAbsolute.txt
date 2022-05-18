@@ -56,8 +56,8 @@ C:\Users\admin\source\repos\CRUD - Aplicación - Web\bin\Microsoft.CodeDom.Provi
 C:\Users\admin\source\repos\CRUD - Aplicación - Web\bin\EntityFramework.xml
 C:\Users\admin\source\repos\CRUD - Aplicación - Web\bin\EntityFramework.SqlServer.xml
 C:\Users\admin\source\repos\CRUD - Aplicación - Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\admin\source\repos\CRUD - Aplicación - Web\obj\Debug\CRUD - Aplicación - Web.csproj.AssemblyReference.cache
 C:\Users\admin\source\repos\CRUD - Aplicación - Web\obj\Debug\CRUD - Aplicación - Web.csproj.CoreCompileInputs.cache
 C:\Users\admin\source\repos\CRUD - Aplicación - Web\obj\Debug\CRUD - Aplicación - Web.csproj.CopyComplete
 C:\Users\admin\source\repos\CRUD - Aplicación - Web\obj\Debug\CRUD - Aplicación - Web.dll
 C:\Users\admin\source\repos\CRUD - Aplicación - Web\obj\Debug\CRUD - Aplicación - Web.pdb
-C:\Users\admin\source\repos\CRUD - Aplicación - Web\obj\Debug\CRUD - Aplicación - Web.csproj.AssemblyReference.cache

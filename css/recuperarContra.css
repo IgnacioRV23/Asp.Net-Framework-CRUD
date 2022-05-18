@@ -1,0 +1,41 @@
+﻿body {
+}
+
+h2 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/*Estilos de los contenedores.*/
+.container_forms {
+    width: 25%;
+    margin: auto;
+    padding:10px 0;
+    text-align:center;
+    border-radius:3px;
+    background-color: #c0c0c0;
+}
+
+.container_forms *{
+    display:block;
+    margin:20px auto;
+}
+
+.div_cambiar {
+    margin-top:30px;
+}
+
+/*Estilos de los texbox.*/
+.campo_texto {
+    outline:none;
+    border-style:solid;
+}
+
+/*Estilos de los botones.*/
+.btn_aceptar {
+    color:#fff;
+    width:100px;
+    cursor:pointer;
+    border-radius:3px;
+    background-color:#000;
+}

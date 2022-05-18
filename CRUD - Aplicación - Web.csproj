@@ -79,10 +79,12 @@
     <Content Include="css\gestionAdmin.css" />
     <Content Include="css\gestionEditor.css" />
     <Content Include="css\login.css" />
+    <Content Include="css\recuperarContra.css" />
     <Content Include="Forms\FrmCrearUsuario.aspx" />
     <Content Include="Forms\FrmGestionAdmin.aspx" />
     <Content Include="Forms\FrmGestionEditor.aspx" />
     <Content Include="Forms\FrmLogin.aspx" />
+    <Content Include="Forms\FrmRecuperarContra.aspx" />
     <Content Include="Model\modelo.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>modelo.edmx</DependentUpon>
@@ -126,6 +128,13 @@
     </Compile>
     <Compile Include="Forms\FrmLogin.aspx.designer.cs">
       <DependentUpon>FrmLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmRecuperarContra.aspx.cs">
+      <DependentUpon>FrmRecuperarContra.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmRecuperarContra.aspx.designer.cs">
+      <DependentUpon>FrmRecuperarContra.aspx</DependentUpon>
     </Compile>
     <Compile Include="Model\modelo.Context.cs">
       <AutoGen>True</AutoGen>

@@ -28,5 +28,6 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <FunctionImportMapping FunctionImportName="agregarUsuario" FunctionName="DB_ProductosModel.Store.agregarUsuario" />
+    <FunctionImportMapping FunctionImportName="cambiaContrasenia" FunctionName="DB_ProductosModel.Store.cambiaContrasenia" />
   </EntityContainerMapping>
 </Mapping>

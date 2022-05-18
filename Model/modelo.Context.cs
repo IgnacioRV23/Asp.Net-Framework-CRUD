@@ -109,5 +109,22 @@ namespace CRUD___Aplicación___Web.Model
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("agregarUsuario", nombreParameter, correoParameter, usuarioParameter, contraseniaParameter, rolParameter);
         }
+    
+        public virtual int cambiaContrasenia(string usuario, string correo, string contrasenia)
+        {
+            var usuarioParameter = usuario != null ?
+                new ObjectParameter("usuario", usuario) :
+                new ObjectParameter("usuario", typeof(string));
+    
+            var correoParameter = correo != null ?
+                new ObjectParameter("correo", correo) :
+                new ObjectParameter("correo", typeof(string));
+    
+            var contraseniaParameter = contrasenia != null ?
+                new ObjectParameter("contrasenia", contrasenia) :
+                new ObjectParameter("contrasenia", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("cambiaContrasenia", usuarioParameter, correoParameter, contraseniaParameter);
+        }
     }
 }

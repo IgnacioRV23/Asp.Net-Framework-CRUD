@@ -36,6 +36,11 @@
       <Parameter Name="contrasenia" Mode="In" Type="String" />
       <Parameter Name="rol" Mode="In" Type="Int32" />
     </FunctionImport>
+    <FunctionImport Name="cambiaContrasenia">
+      <Parameter Name="usuario" Mode="In" Type="String" />
+      <Parameter Name="correo" Mode="In" Type="String" />
+      <Parameter Name="contrasenia" Mode="In" Type="String" />
+    </FunctionImport>
   </EntityContainer>
   <EntityType Name="Usuarios">
     <Key>
