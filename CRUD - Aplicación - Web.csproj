@@ -78,11 +78,13 @@
     <Content Include="css\crearUsuario.css" />
     <Content Include="css\gestionAdmin.css" />
     <Content Include="css\gestionEditor.css" />
+    <Content Include="css\gestionLector.css" />
     <Content Include="css\login.css" />
     <Content Include="css\recuperarContra.css" />
     <Content Include="Forms\FrmCrearUsuario.aspx" />
     <Content Include="Forms\FrmGestionAdmin.aspx" />
     <Content Include="Forms\FrmGestionEditor.aspx" />
+    <Content Include="Forms\FrmGestionLector.aspx" />
     <Content Include="Forms\FrmLogin.aspx" />
     <Content Include="Forms\FrmRecuperarContra.aspx" />
     <Content Include="Model\modelo.Context.tt">
@@ -95,6 +97,7 @@
       <DependentUpon>modelo.edmx</DependentUpon>
       <LastGenOutput>modelo.cs</LastGenOutput>
     </Content>
+    <Content Include="src\buscador.svg" />
     <Content Include="src\favicon.svg" />
     <Content Include="src\logo.svg" />
     <Content Include="src\usuario.svg" />
@@ -121,6 +124,13 @@
     </Compile>
     <Compile Include="Forms\FrmGestionEditor.aspx.designer.cs">
       <DependentUpon>FrmGestionEditor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmGestionLector.aspx.cs">
+      <DependentUpon>FrmGestionLector.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmGestionLector.aspx.designer.cs">
+      <DependentUpon>FrmGestionLector.aspx</DependentUpon>
     </Compile>
     <Compile Include="Forms\FrmLogin.aspx.cs">
       <DependentUpon>FrmLogin.aspx</DependentUpon>
@@ -150,6 +160,21 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>modelo.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Model\productoCantidad_Result.cs">
+      <DependentUpon>modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\productoID_Result.cs">
+      <DependentUpon>modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\productoNombre_Result.cs">
+      <DependentUpon>modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\productoPrecio_Result.cs">
+      <DependentUpon>modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\productoProveedor_Result.cs">
+      <DependentUpon>modelo.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\Productos.cs">
       <DependentUpon>modelo.tt</DependentUpon>

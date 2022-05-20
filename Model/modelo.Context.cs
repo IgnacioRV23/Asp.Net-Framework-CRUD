@@ -126,5 +126,50 @@ namespace CRUD___Aplicación___Web.Model
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("cambiaContrasenia", usuarioParameter, correoParameter, contraseniaParameter);
         }
+    
+        public virtual ObjectResult<productoCantidad_Result> productoCantidad(Nullable<int> cantidad)
+        {
+            var cantidadParameter = cantidad.HasValue ?
+                new ObjectParameter("cantidad", cantidad) :
+                new ObjectParameter("cantidad", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<productoCantidad_Result>("productoCantidad", cantidadParameter);
+        }
+    
+        public virtual ObjectResult<productoID_Result> productoID(Nullable<int> id)
+        {
+            var idParameter = id.HasValue ?
+                new ObjectParameter("id", id) :
+                new ObjectParameter("id", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<productoID_Result>("productoID", idParameter);
+        }
+    
+        public virtual ObjectResult<productoNombre_Result> productoNombre(string nombre)
+        {
+            var nombreParameter = nombre != null ?
+                new ObjectParameter("nombre", nombre) :
+                new ObjectParameter("nombre", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<productoNombre_Result>("productoNombre", nombreParameter);
+        }
+    
+        public virtual ObjectResult<productoPrecio_Result> productoPrecio(Nullable<int> precio)
+        {
+            var precioParameter = precio.HasValue ?
+                new ObjectParameter("precio", precio) :
+                new ObjectParameter("precio", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<productoPrecio_Result>("productoPrecio", precioParameter);
+        }
+    
+        public virtual ObjectResult<productoProveedor_Result> productoProveedor(string proveedor)
+        {
+            var proveedorParameter = proveedor != null ?
+                new ObjectParameter("proveedor", proveedor) :
+                new ObjectParameter("proveedor", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<productoProveedor_Result>("productoProveedor", proveedorParameter);
+        }
     }
 }

@@ -41,6 +41,21 @@
       <Parameter Name="correo" Mode="In" Type="String" />
       <Parameter Name="contrasenia" Mode="In" Type="String" />
     </FunctionImport>
+    <FunctionImport Name="productoCantidad" ReturnType="Collection(DB_ProductosModel.productoCantidad_Result)">
+      <Parameter Name="cantidad" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="productoID" ReturnType="Collection(DB_ProductosModel.productoID_Result)">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="productoNombre" ReturnType="Collection(DB_ProductosModel.productoNombre_Result)">
+      <Parameter Name="nombre" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="productoPrecio" ReturnType="Collection(DB_ProductosModel.productoPrecio_Result)">
+      <Parameter Name="precio" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="productoProveedor" ReturnType="Collection(DB_ProductosModel.productoProveedor_Result)">
+      <Parameter Name="proveedor" Mode="In" Type="String" />
+    </FunctionImport>
   </EntityContainer>
   <EntityType Name="Usuarios">
     <Key>
@@ -53,4 +68,39 @@
     <Property Name="contrasenia" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="rol" Type="Int32" Nullable="false" />
   </EntityType>
+  <ComplexType Name="productoCantidad_Result">
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="nombre" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="cantidad" Nullable="false" />
+    <Property Type="Double" Name="precio" Nullable="false" />
+    <Property Type="String" Name="proveedor" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="productoID_Result">
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="nombre" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="cantidad" Nullable="false" />
+    <Property Type="Double" Name="precio" Nullable="false" />
+    <Property Type="String" Name="proveedor" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="productoNombre_Result">
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="nombre" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="cantidad" Nullable="false" />
+    <Property Type="Double" Name="precio" Nullable="false" />
+    <Property Type="String" Name="proveedor" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="productoPrecio_Result">
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="nombre" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="cantidad" Nullable="false" />
+    <Property Type="Double" Name="precio" Nullable="false" />
+    <Property Type="String" Name="proveedor" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="productoProveedor_Result">
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="nombre" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="cantidad" Nullable="false" />
+    <Property Type="Double" Name="precio" Nullable="false" />
+    <Property Type="String" Name="proveedor" Nullable="false" MaxLength="50" />
+  </ComplexType>
 </Schema>

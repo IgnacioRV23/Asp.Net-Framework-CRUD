@@ -29,5 +29,60 @@
     </EntitySetMapping>
     <FunctionImportMapping FunctionImportName="agregarUsuario" FunctionName="DB_ProductosModel.Store.agregarUsuario" />
     <FunctionImportMapping FunctionImportName="cambiaContrasenia" FunctionName="DB_ProductosModel.Store.cambiaContrasenia" />
+    <FunctionImportMapping FunctionImportName="productoCantidad" FunctionName="DB_ProductosModel.Store.productoCantidad">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB_ProductosModel.productoCantidad_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="cantidad" ColumnName="cantidad" />
+          <ScalarProperty Name="precio" ColumnName="precio" />
+          <ScalarProperty Name="proveedor" ColumnName="proveedor" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="productoID" FunctionName="DB_ProductosModel.Store.productoID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB_ProductosModel.productoID_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="cantidad" ColumnName="cantidad" />
+          <ScalarProperty Name="precio" ColumnName="precio" />
+          <ScalarProperty Name="proveedor" ColumnName="proveedor" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="productoNombre" FunctionName="DB_ProductosModel.Store.productoNombre">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB_ProductosModel.productoNombre_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="cantidad" ColumnName="cantidad" />
+          <ScalarProperty Name="precio" ColumnName="precio" />
+          <ScalarProperty Name="proveedor" ColumnName="proveedor" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="productoPrecio" FunctionName="DB_ProductosModel.Store.productoPrecio">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB_ProductosModel.productoPrecio_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="cantidad" ColumnName="cantidad" />
+          <ScalarProperty Name="precio" ColumnName="precio" />
+          <ScalarProperty Name="proveedor" ColumnName="proveedor" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="productoProveedor" FunctionName="DB_ProductosModel.Store.productoProveedor">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB_ProductosModel.productoProveedor_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="cantidad" ColumnName="cantidad" />
+          <ScalarProperty Name="precio" ColumnName="precio" />
+          <ScalarProperty Name="proveedor" ColumnName="proveedor" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
   </EntityContainerMapping>
 </Mapping>

@@ -54,6 +54,21 @@
         <Function Name="eliminarProducto" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="id" Type="int" Mode="In" />
         </Function>
+        <Function Name="productoCantidad" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="cantidad" Type="int" Mode="In" />
+        </Function>
+        <Function Name="productoID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="productoNombre" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="nombre" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="productoPrecio" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="precio" Type="int" Mode="In" />
+        </Function>
+        <Function Name="productoProveedor" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="proveedor" Type="varchar" Mode="In" />
+        </Function>
         <EntityContainer Name="DB_ProductosModelStoreContainer">
           <EntitySet Name="Productos" EntityType="Self.Productos" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Usuarios" EntityType="Self.Usuarios" Schema="dbo" store:Type="Tables" />
@@ -103,6 +118,21 @@
             <Parameter Name="correo" Mode="In" Type="String" />
             <Parameter Name="contrasenia" Mode="In" Type="String" />
           </FunctionImport>
+          <FunctionImport Name="productoCantidad" ReturnType="Collection(DB_ProductosModel.productoCantidad_Result)">
+            <Parameter Name="cantidad" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="productoID" ReturnType="Collection(DB_ProductosModel.productoID_Result)">
+            <Parameter Name="id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="productoNombre" ReturnType="Collection(DB_ProductosModel.productoNombre_Result)">
+            <Parameter Name="nombre" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="productoPrecio" ReturnType="Collection(DB_ProductosModel.productoPrecio_Result)">
+            <Parameter Name="precio" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="productoProveedor" ReturnType="Collection(DB_ProductosModel.productoProveedor_Result)">
+            <Parameter Name="proveedor" Mode="In" Type="String" />
+          </FunctionImport>
         </EntityContainer>
         <EntityType Name="Usuarios">
           <Key>
@@ -115,6 +145,41 @@
           <Property Name="contrasenia" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="rol" Type="Int32" Nullable="false" />
         </EntityType>
+        <ComplexType Name="productoCantidad_Result">
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="nombre" Nullable="false" MaxLength="50" />
+          <Property Type="Int32" Name="cantidad" Nullable="false" />
+          <Property Type="Double" Name="precio" Nullable="false" />
+          <Property Type="String" Name="proveedor" Nullable="false" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="productoID_Result">
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="nombre" Nullable="false" MaxLength="50" />
+          <Property Type="Int32" Name="cantidad" Nullable="false" />
+          <Property Type="Double" Name="precio" Nullable="false" />
+          <Property Type="String" Name="proveedor" Nullable="false" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="productoNombre_Result">
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="nombre" Nullable="false" MaxLength="50" />
+          <Property Type="Int32" Name="cantidad" Nullable="false" />
+          <Property Type="Double" Name="precio" Nullable="false" />
+          <Property Type="String" Name="proveedor" Nullable="false" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="productoPrecio_Result">
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="nombre" Nullable="false" MaxLength="50" />
+          <Property Type="Int32" Name="cantidad" Nullable="false" />
+          <Property Type="Double" Name="precio" Nullable="false" />
+          <Property Type="String" Name="proveedor" Nullable="false" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="productoProveedor_Result">
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="nombre" Nullable="false" MaxLength="50" />
+          <Property Type="Int32" Name="cantidad" Nullable="false" />
+          <Property Type="Double" Name="precio" Nullable="false" />
+          <Property Type="String" Name="proveedor" Nullable="false" MaxLength="50" />
+        </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -149,6 +214,61 @@
           </EntitySetMapping>
           <FunctionImportMapping FunctionImportName="agregarUsuario" FunctionName="DB_ProductosModel.Store.agregarUsuario" />
           <FunctionImportMapping FunctionImportName="cambiaContrasenia" FunctionName="DB_ProductosModel.Store.cambiaContrasenia" />
+          <FunctionImportMapping FunctionImportName="productoCantidad" FunctionName="DB_ProductosModel.Store.productoCantidad">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DB_ProductosModel.productoCantidad_Result">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="cantidad" ColumnName="cantidad" />
+                <ScalarProperty Name="precio" ColumnName="precio" />
+                <ScalarProperty Name="proveedor" ColumnName="proveedor" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="productoID" FunctionName="DB_ProductosModel.Store.productoID">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DB_ProductosModel.productoID_Result">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="cantidad" ColumnName="cantidad" />
+                <ScalarProperty Name="precio" ColumnName="precio" />
+                <ScalarProperty Name="proveedor" ColumnName="proveedor" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="productoNombre" FunctionName="DB_ProductosModel.Store.productoNombre">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DB_ProductosModel.productoNombre_Result">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="cantidad" ColumnName="cantidad" />
+                <ScalarProperty Name="precio" ColumnName="precio" />
+                <ScalarProperty Name="proveedor" ColumnName="proveedor" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="productoPrecio" FunctionName="DB_ProductosModel.Store.productoPrecio">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DB_ProductosModel.productoPrecio_Result">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="cantidad" ColumnName="cantidad" />
+                <ScalarProperty Name="precio" ColumnName="precio" />
+                <ScalarProperty Name="proveedor" ColumnName="proveedor" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="productoProveedor" FunctionName="DB_ProductosModel.Store.productoProveedor">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DB_ProductosModel.productoProveedor_Result">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="cantidad" ColumnName="cantidad" />
+                <ScalarProperty Name="precio" ColumnName="precio" />
+                <ScalarProperty Name="proveedor" ColumnName="proveedor" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
