@@ -23,6 +23,11 @@
     border-style: solid;
 }
 
+.resultado {
+    display:block;
+    margin-bottom:15px;
+}
+
 .btn_ingresar {
     color: #fff;
     width: 180px;

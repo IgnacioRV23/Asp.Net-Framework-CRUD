@@ -171,5 +171,18 @@ namespace CRUD___Aplicación___Web.Model
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<productoProveedor_Result>("productoProveedor", proveedorParameter);
         }
+    
+        public virtual int loginUsuario(string usuario, string contrasenia, ObjectParameter rol)
+        {
+            var usuarioParameter = usuario != null ?
+                new ObjectParameter("usuario", usuario) :
+                new ObjectParameter("usuario", typeof(string));
+    
+            var contraseniaParameter = contrasenia != null ?
+                new ObjectParameter("contrasenia", contrasenia) :
+                new ObjectParameter("contrasenia", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("loginUsuario", usuarioParameter, contraseniaParameter, rol);
+        }
     }
 }

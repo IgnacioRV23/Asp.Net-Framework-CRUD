@@ -56,6 +56,11 @@
     <FunctionImport Name="productoProveedor" ReturnType="Collection(DB_ProductosModel.productoProveedor_Result)">
       <Parameter Name="proveedor" Mode="In" Type="String" />
     </FunctionImport>
+    <FunctionImport Name="loginUsuario">
+      <Parameter Name="usuario" Mode="In" Type="String" />
+      <Parameter Name="contrasenia" Mode="In" Type="String" />
+      <Parameter Name="rol" Mode="InOut" Type="Int32" />
+    </FunctionImport>
   </EntityContainer>
   <EntityType Name="Usuarios">
     <Key>

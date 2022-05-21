@@ -19,8 +19,10 @@
             <asp:TextBox runat="server" id="txtUsuario" placeholder="Usuario" CssClass="campo_texto"/>
 
             <asp:TextBox runat="server" id="txtContrasenia" placeholder="Contraseña" CssClass="campo_texto"/>
+            
+            <asp:Button Text="Ingresar" runat="server" CssClass="btn_ingresar" ID="btnIngresar" OnClick="btnIngresar_Click"/>
 
-            <asp:Button Text="Ingresar" runat="server" CssClass="btn_ingresar"/>
+            <asp:Label Text="" runat="server" id="lblResultado" CssClass="resultado"/>
         </div>
     </form>
 </body>

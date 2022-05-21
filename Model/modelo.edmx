@@ -54,6 +54,11 @@
         <Function Name="eliminarProducto" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="id" Type="int" Mode="In" />
         </Function>
+        <Function Name="loginUsuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="usuario" Type="varchar" Mode="In" />
+          <Parameter Name="contrasenia" Type="varchar" Mode="In" />
+          <Parameter Name="rol" Type="int" Mode="InOut" />
+        </Function>
         <Function Name="productoCantidad" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="cantidad" Type="int" Mode="In" />
         </Function>
@@ -119,19 +124,24 @@
             <Parameter Name="contrasenia" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="productoCantidad" ReturnType="Collection(DB_ProductosModel.productoCantidad_Result)">
-            <Parameter Name="cantidad" Mode="In" Type="Int32" />
+          <Parameter Name="cantidad" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="productoID" ReturnType="Collection(DB_ProductosModel.productoID_Result)">
-            <Parameter Name="id" Mode="In" Type="Int32" />
+          <Parameter Name="id" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="productoNombre" ReturnType="Collection(DB_ProductosModel.productoNombre_Result)">
-            <Parameter Name="nombre" Mode="In" Type="String" />
+          <Parameter Name="nombre" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="productoPrecio" ReturnType="Collection(DB_ProductosModel.productoPrecio_Result)">
-            <Parameter Name="precio" Mode="In" Type="Int32" />
+          <Parameter Name="precio" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="productoProveedor" ReturnType="Collection(DB_ProductosModel.productoProveedor_Result)">
-            <Parameter Name="proveedor" Mode="In" Type="String" />
+          <Parameter Name="proveedor" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="loginUsuario">
+            <Parameter Name="usuario" Mode="In" Type="String" />
+            <Parameter Name="contrasenia" Mode="In" Type="String" />
+            <Parameter Name="rol" Mode="InOut" Type="Int32" />
           </FunctionImport>
         </EntityContainer>
         <EntityType Name="Usuarios">
@@ -269,6 +279,7 @@
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="loginUsuario" FunctionName="DB_ProductosModel.Store.loginUsuario" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

@@ -84,5 +84,6 @@
         </ComplexTypeMapping>
       </ResultMapping>
     </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="loginUsuario" FunctionName="DB_ProductosModel.Store.loginUsuario" />
   </EntityContainerMapping>
 </Mapping>
