@@ -59,7 +59,7 @@
 
             <div class="container_grid">
                 <asp:GridView runat="server" ID="gridProductos"  RowStyle-HorizontalAlign="Center" CellPadding="15" AllowPaging="True" BackColor="White" BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px" ForeColor="Black" GridLines="Vertical" PageSize="5"
-                    OnPageIndexChanging="gridProductos_PageIndexChanging">
+                    OnPageIndexChanging="gridProductos_PageIndexChanging" EmptyDataText="No se encontró ningún resultado">
                     <AlternatingRowStyle BackColor="#C0C0C0" />
                     <FooterStyle BackColor="#CCCCCC" />
                     <HeaderStyle BackColor="Black" ForeColor="White" Font-Bold="True" />

@@ -51,7 +51,7 @@
       <Parameter Name="nombre" Mode="In" Type="String" />
     </FunctionImport>
     <FunctionImport Name="productoPrecio" ReturnType="Collection(DB_ProductosModel.productoPrecio_Result)">
-      <Parameter Name="precio" Mode="In" Type="Int32" />
+      <Parameter Name="precio" Mode="In" Type="Double" />
     </FunctionImport>
     <FunctionImport Name="productoProveedor" ReturnType="Collection(DB_ProductosModel.productoProveedor_Result)">
       <Parameter Name="proveedor" Mode="In" Type="String" />

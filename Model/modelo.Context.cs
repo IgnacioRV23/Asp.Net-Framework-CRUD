@@ -154,11 +154,11 @@ namespace CRUD___Aplicación___Web.Model
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<productoNombre_Result>("productoNombre", nombreParameter);
         }
     
-        public virtual ObjectResult<productoPrecio_Result> productoPrecio(Nullable<int> precio)
+        public virtual ObjectResult<productoPrecio_Result> productoPrecio(Nullable<double> precio)
         {
             var precioParameter = precio.HasValue ?
                 new ObjectParameter("precio", precio) :
-                new ObjectParameter("precio", typeof(int));
+                new ObjectParameter("precio", typeof(double));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<productoPrecio_Result>("productoPrecio", precioParameter);
         }
