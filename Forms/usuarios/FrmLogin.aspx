@@ -6,13 +6,13 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>Iniciar sesión</title>
-    <link href="../css/login.css" rel="stylesheet" />
+    <link href="../../css/usuarios/login.css" rel="stylesheet" />
     <link href="../src/favicon.svg" rel="icon" />
 </head>
 <body>
     <form id="frm1" runat="server">
         <div class="container_login">
-            <img src="../src/usuario.svg" alt="usuario" class="imagen_usuario"/>
+            <img src="../../src/usuario.svg" alt="usuario" class="imagen_usuario"/>
 
             <h2>Login</h2>
 

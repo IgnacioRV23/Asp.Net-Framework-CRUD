@@ -6,14 +6,16 @@
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Productos</title>
-    <link href="../css/gestionAdmin.css" rel="stylesheet" />
-    <link href="../src/favicon.svg" rel="icon" />
+    <link href="../../css/productos/gestionAdmin.css" rel="stylesheet" />
+    <link href="../../src/favicon.svg" rel="icon" />
 </head>
 <body>
     <form id="frm1" runat="server">
         <div class="container_barra">
             <div>
-                <img src="../src/logo.svg" alt="logo" class="imagen_logo" />
+                <a href="FrmGestionAdmin.aspx">
+                    <img src="../../src/logo.svg" alt="logo" class="imagen_logo" />
+                </a>
             </div>
 
             <div>

@@ -5,15 +5,17 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <link href="../src/favicon.svg" rel="icon" />
-    <link href="../css/gestionLector.css" rel="stylesheet" />
+    <link href="../../src/favicon.svg" rel="icon" />
+    <link href="../../css/productos/gestionLector.css" rel="stylesheet" />
     <title>Productos</title>
 </head>
 <body>
     <form id="frm1" runat="server">
         <div class="container_barra">
             <div>
-                <img src="../src/logo.svg" alt="logo" class="imagen_logo" />
+                <a href="FrmGestionLector.aspx">
+                    <img src="../../src/logo.svg" alt="logo" class="imagen_logo" />
+                </a>
             </div>
 
             <div>
@@ -42,7 +44,7 @@
             <h2 class="titulo_buscador">Buscardor de productos</h2>
 
             <div class="container_buscador">
-                <img src="../src/buscador.svg" alt="buscador" class="img_buscador" />
+                <img src="../../src/buscador.svg" alt="buscador" class="img_buscador" />
                 <asp:TextBox runat="server" class="buscador" ID="txtBuscador" placeholder="Buscador" OnTextChanged="txtBuscador_TextChanged" />
 
                 <asp:DropDownList runat="server" CssClass="drop_opciones" ID="dropOpciones">

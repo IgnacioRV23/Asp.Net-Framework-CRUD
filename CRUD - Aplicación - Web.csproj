@@ -73,18 +73,20 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="css\crearUsuario.css" />
-    <Content Include="css\gestionAdmin.css" />
-    <Content Include="css\gestionEditor.css" />
-    <Content Include="css\gestionLector.css" />
-    <Content Include="css\login.css" />
-    <Content Include="css\recuperarContra.css" />
-    <Content Include="Forms\FrmCrearUsuario.aspx" />
-    <Content Include="Forms\FrmGestionAdmin.aspx" />
-    <Content Include="Forms\FrmGestionEditor.aspx" />
-    <Content Include="Forms\FrmGestionLector.aspx" />
-    <Content Include="Forms\FrmLogin.aspx" />
-    <Content Include="Forms\FrmRecuperarContra.aspx" />
+    <Content Include="css\usuarios\crearUsuario.css" />
+    <Content Include="css\usuarios\eliminarUsuario.css" />
+    <Content Include="css\productos\gestionAdmin.css" />
+    <Content Include="css\productos\gestionEditor.css" />
+    <Content Include="css\productos\gestionLector.css" />
+    <Content Include="css\usuarios\login.css" />
+    <Content Include="css\usuarios\recuperarContra.css" />
+    <Content Include="Forms\usuarios\FrmCrearUsuario.aspx" />
+    <Content Include="Forms\usuarios\FrmEliminarUsuario.aspx" />
+    <Content Include="Forms\productos\FrmGestionAdmin.aspx" />
+    <Content Include="Forms\productos\FrmGestionEditor.aspx" />
+    <Content Include="Forms\productos\FrmGestionLector.aspx" />
+    <Content Include="Forms\usuarios\FrmLogin.aspx" />
+    <Content Include="Forms\usuarios\FrmRecuperarContra.aspx" />
     <Content Include="Model\modelo.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>modelo.edmx</DependentUpon>
@@ -102,46 +104,53 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Forms\FrmCrearUsuario.aspx.cs">
+    <Compile Include="Forms\usuarios\FrmCrearUsuario.aspx.cs">
       <DependentUpon>FrmCrearUsuario.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Forms\FrmCrearUsuario.aspx.designer.cs">
+    <Compile Include="Forms\usuarios\FrmCrearUsuario.aspx.designer.cs">
       <DependentUpon>FrmCrearUsuario.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmGestionAdmin.aspx.cs">
+    <Compile Include="Forms\usuarios\FrmEliminarUsuario.aspx.cs">
+      <DependentUpon>FrmEliminarUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\usuarios\FrmEliminarUsuario.aspx.designer.cs">
+      <DependentUpon>FrmEliminarUsuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\productos\FrmGestionAdmin.aspx.cs">
       <DependentUpon>FrmGestionAdmin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Forms\FrmGestionAdmin.aspx.designer.cs">
+    <Compile Include="Forms\productos\FrmGestionAdmin.aspx.designer.cs">
       <DependentUpon>FrmGestionAdmin.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmGestionEditor.aspx.cs">
+    <Compile Include="Forms\productos\FrmGestionEditor.aspx.cs">
       <DependentUpon>FrmGestionEditor.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Forms\FrmGestionEditor.aspx.designer.cs">
+    <Compile Include="Forms\productos\FrmGestionEditor.aspx.designer.cs">
       <DependentUpon>FrmGestionEditor.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmGestionLector.aspx.cs">
+    <Compile Include="Forms\productos\FrmGestionLector.aspx.cs">
       <DependentUpon>FrmGestionLector.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Forms\FrmGestionLector.aspx.designer.cs">
+    <Compile Include="Forms\productos\FrmGestionLector.aspx.designer.cs">
       <DependentUpon>FrmGestionLector.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmLogin.aspx.cs">
+    <Compile Include="Forms\usuarios\FrmLogin.aspx.cs">
       <DependentUpon>FrmLogin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Forms\FrmLogin.aspx.designer.cs">
+    <Compile Include="Forms\usuarios\FrmLogin.aspx.designer.cs">
       <DependentUpon>FrmLogin.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmRecuperarContra.aspx.cs">
+    <Compile Include="Forms\usuarios\FrmRecuperarContra.aspx.cs">
       <DependentUpon>FrmRecuperarContra.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Forms\FrmRecuperarContra.aspx.designer.cs">
+    <Compile Include="Forms\usuarios\FrmRecuperarContra.aspx.designer.cs">
       <DependentUpon>FrmRecuperarContra.aspx</DependentUpon>
     </Compile>
     <Compile Include="Model\modelo.Context.cs">

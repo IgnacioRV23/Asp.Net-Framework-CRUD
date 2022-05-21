@@ -6,8 +6,8 @@
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Crear usuario</title>
-    <link href="../css/crearUsuario.css" rel="stylesheet" />
-    <link href="../src/favicon.svg" rel="icon" />
+    <link href="../../css/usuarios/crearUsuario.css" rel="stylesheet" />
+    <link href="../../src/favicon.svg" rel="icon" />
 </head>
 <body>
     <form id="frm1" runat="server">

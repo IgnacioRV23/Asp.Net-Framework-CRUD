@@ -5,8 +5,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <link href="../src/favicon.svg" rel="icon" />
-    <link href="../css/recuperarContra.css" rel="stylesheet" />
+    <link href="../../src/favicon.svg" rel="icon" />
+    <link href="../../css/usuarios/recuperarContra.css" rel="stylesheet" />
     <title>Recuperar usuario</title>
 </head>
 <body>
