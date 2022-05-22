@@ -193,5 +193,35 @@ namespace CRUD___Aplicación___Web.Model
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("eliminarUsuario", idParameter);
         }
+    
+        public virtual ObjectResult<cargaDatos_Result> cargaDatos()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<cargaDatos_Result>("cargaDatos");
+        }
+    
+        public virtual int actualizarUsuario(string nombre, string correo, string usuario, Nullable<int> rol, string nombreUsuario)
+        {
+            var nombreParameter = nombre != null ?
+                new ObjectParameter("nombre", nombre) :
+                new ObjectParameter("nombre", typeof(string));
+    
+            var correoParameter = correo != null ?
+                new ObjectParameter("correo", correo) :
+                new ObjectParameter("correo", typeof(string));
+    
+            var usuarioParameter = usuario != null ?
+                new ObjectParameter("usuario", usuario) :
+                new ObjectParameter("usuario", typeof(string));
+    
+            var rolParameter = rol.HasValue ?
+                new ObjectParameter("rol", rol) :
+                new ObjectParameter("rol", typeof(int));
+    
+            var nombreUsuarioParameter = nombreUsuario != null ?
+                new ObjectParameter("nombreUsuario", nombreUsuario) :
+                new ObjectParameter("nombreUsuario", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("actualizarUsuario", nombreParameter, correoParameter, usuarioParameter, rolParameter, nombreUsuarioParameter);
+        }
     }
 }

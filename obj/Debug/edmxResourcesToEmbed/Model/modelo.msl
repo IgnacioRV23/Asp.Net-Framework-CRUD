@@ -86,5 +86,16 @@
     </FunctionImportMapping>
     <FunctionImportMapping FunctionImportName="loginUsuario" FunctionName="DB_ProductosModel.Store.loginUsuario" />
     <FunctionImportMapping FunctionImportName="eliminarUsuario" FunctionName="DB_ProductosModel.Store.eliminarUsuario" />
+    <FunctionImportMapping FunctionImportName="cargaDatos" FunctionName="DB_ProductosModel.Store.cargaDatos">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB_ProductosModel.cargaDatos_Result">
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="correo" ColumnName="correo" />
+          <ScalarProperty Name="usuario" ColumnName="usuario" />
+          <ScalarProperty Name="rol" ColumnName="rol" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="actualizarUsuario" FunctionName="DB_ProductosModel.Store.actualizarUsuario" />
   </EntityContainerMapping>
 </Mapping>

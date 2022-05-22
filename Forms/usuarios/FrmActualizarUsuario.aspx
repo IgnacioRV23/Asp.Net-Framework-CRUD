@@ -1,35 +1,39 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="FrmEliminarUsuario.aspx.cs" Inherits="CRUD___Aplicación___Web.Forms.FrmEliminarUsuario" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="FrmActualizarUsuario.aspx.cs" Inherits="CRUD___Aplicación___Web.Forms.usuarios.FrmActualizarUsuario" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <link href="../../css/usuarios/eliminarUsuario.css" rel="stylesheet" />
+    <link href="../../css/usuarios/actualizarUsuario.css" rel="stylesheet" />
     <link href="../../src/favicon.svg" rel="icon" />
-    <title>Eliminar usuario</title>
+    <title>Actualizar usuario</title>
 </head>
 <body>
     <form id="frm1" runat="server">
-        <h2>Eliminar Usuarios</h2>
-
         <div class="container_forms">
-            <p>Nombre: </p>
-            <asp:TextBox runat="server" ID="txtNombre" CssClass="campo_texto" ReadOnly="true" />
+            
+            <h2>Actualizar usuarios</h2>
 
-            <p>Usuario: </p>
-            <asp:TextBox runat="server" ID="txtUsuario" CssClass="campo_texto" ReadOnly="true" />
+            <asp:TextBox runat="server" CssClass="campo_texto" ID="txtNombre" placeholder="Nombre" />
 
-            <asp:Button Text="Eliminar usuario" runat="server" ID="btnEliminar" CssClass="btn_eliminar" OnClick="btnEliminar_Click"/>
+            <asp:TextBox runat="server" CssClass="campo_texto" ID="txtCorreo" placeholder="Correo" />
+
+            <asp:TextBox runat="server" CssClass="campo_texto" ID="txtUsuario" placeholder="Usuario" />
+
+            <asp:DropDownList runat="server" CssClass="dropDown" ID="dropUsuario">
+                <asp:ListItem Text="Rol de usuario" />
+                <asp:ListItem Text="Administrador" />
+                <asp:ListItem Text="Editor" />
+                <asp:ListItem Text="Lector" />
+            </asp:DropDownList>
+
+            <asp:Label Text="Mensaje:" runat="server" CssClass="mensaje" ID="lblMensaje" />
+
+            <asp:Button Text="Actualizar" runat="server" CssClass="btn_actualizar" ID="btnActualizar" OnClick="btnActualizar_Click" />
         </div>
 
-        <div class="container_opcion">
-            <asp:Label Text="¿Seguro que desea eliminar este usuario?" runat="server" ID="lblMensaje" />
-
-            <asp:Button Text="Si" runat="server" CssClass="botones boton_si" ID="btnSi" OnClick="btnSi_Click"/>
-
-            <asp:Button Text="No" runat="server" CssClass="botones boton_no" ID="btnNo" OnClick="btnNo_Click"/>
-        </div>
+        <h2>Lista de usuarios</h2>
 
         <div class="container_grid">
             <asp:GridView runat="server" ID="gridUsuarios" AutoGenerateSelectButton="True" RowStyle-HorizontalAlign="Center" CellPadding="15" AllowPaging="True" BackColor="White" BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px" ForeColor="Black" GridLines="Vertical" PageSize="8"

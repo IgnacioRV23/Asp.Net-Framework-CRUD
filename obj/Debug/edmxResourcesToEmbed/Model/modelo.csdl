@@ -64,6 +64,14 @@
     <FunctionImport Name="eliminarUsuario">
       <Parameter Name="id" Mode="In" Type="Int32" />
     </FunctionImport>
+    <FunctionImport Name="cargaDatos" ReturnType="Collection(DB_ProductosModel.cargaDatos_Result)" />
+    <FunctionImport Name="actualizarUsuario">
+      <Parameter Name="nombre" Mode="In" Type="String" />
+      <Parameter Name="correo" Mode="In" Type="String" />
+      <Parameter Name="usuario" Mode="In" Type="String" />
+      <Parameter Name="rol" Mode="In" Type="Int32" />
+      <Parameter Name="nombreUsuario" Mode="In" Type="String" />
+    </FunctionImport>
   </EntityContainer>
   <EntityType Name="Usuarios">
     <Key>
@@ -110,5 +118,11 @@
     <Property Type="Int32" Name="cantidad" Nullable="false" />
     <Property Type="Double" Name="precio" Nullable="false" />
     <Property Type="String" Name="proveedor" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="cargaDatos_Result">
+    <Property Type="String" Name="nombre" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="correo" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="usuario" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="rol" Nullable="false" />
   </ComplexType>
 </Schema>

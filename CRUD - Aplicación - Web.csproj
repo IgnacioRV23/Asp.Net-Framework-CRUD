@@ -73,6 +73,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="css\usuarios\actualizarUsuario.css" />
     <Content Include="css\usuarios\crearUsuario.css" />
     <Content Include="css\usuarios\eliminarUsuario.css" />
     <Content Include="css\productos\gestionAdmin.css" />
@@ -80,6 +81,7 @@
     <Content Include="css\productos\gestionLector.css" />
     <Content Include="css\usuarios\login.css" />
     <Content Include="css\usuarios\recuperarContra.css" />
+    <Content Include="Forms\usuarios\FrmActualizarUsuario.aspx" />
     <Content Include="Forms\usuarios\FrmCrearUsuario.aspx" />
     <Content Include="Forms\usuarios\FrmEliminarUsuario.aspx" />
     <Content Include="Forms\productos\FrmGestionAdmin.aspx" />
@@ -104,6 +106,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\usuarios\FrmActualizarUsuario.aspx.cs">
+      <DependentUpon>FrmActualizarUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\usuarios\FrmActualizarUsuario.aspx.designer.cs">
+      <DependentUpon>FrmActualizarUsuario.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Forms\usuarios\FrmCrearUsuario.aspx.cs">
       <DependentUpon>FrmCrearUsuario.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -152,6 +161,9 @@
     </Compile>
     <Compile Include="Forms\usuarios\FrmRecuperarContra.aspx.designer.cs">
       <DependentUpon>FrmRecuperarContra.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Model\cargaDatos_Result.cs">
+      <DependentUpon>modelo.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\modelo.Context.cs">
       <AutoGen>True</AutoGen>

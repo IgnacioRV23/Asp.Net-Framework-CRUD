@@ -18,7 +18,7 @@ namespace CRUD___Aplicación___Web.Forms
 
         private Boolean validaCampos()
         {
-            Boolean valida = false;
+            Boolean valida;
 
             if (!txtNombre.Text.Equals("") && !txtCorreo.Text.Equals("") && !txtUsuario.Text.Equals("") && !txtContrasenia.Text.Equals("")  && dropUsuario.SelectedIndex != 0) {
                 valida = true;

@@ -33,6 +33,13 @@
           <Parameter Name="precio" Type="float" Mode="In" />
           <Parameter Name="proveedor" Type="varchar" Mode="In" />
         </Function>
+        <Function Name="actualizarUsuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="nombre" Type="varchar" Mode="In" />
+          <Parameter Name="correo" Type="varchar" Mode="In" />
+          <Parameter Name="usuario" Type="varchar" Mode="In" />
+          <Parameter Name="rol" Type="int" Mode="In" />
+          <Parameter Name="nombreUsuario" Type="varchar" Mode="In" />
+        </Function>
         <Function Name="AgregarProducto" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="nombre" Type="varchar" Mode="In" />
           <Parameter Name="cantidad" Type="int" Mode="In" />
@@ -51,6 +58,7 @@
           <Parameter Name="correo" Type="varchar" Mode="In" />
           <Parameter Name="contrasenia" Type="varchar" Mode="In" />
         </Function>
+        <Function Name="cargaDatos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="eliminarProducto" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="id" Type="int" Mode="In" />
         </Function>
@@ -147,7 +155,15 @@
             <Parameter Name="rol" Mode="InOut" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="eliminarUsuario">
-            <Parameter Name="id" Mode="In" Type="Int32" />
+          <Parameter Name="id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="cargaDatos" ReturnType="Collection(DB_ProductosModel.cargaDatos_Result)" />
+          <FunctionImport Name="actualizarUsuario">
+            <Parameter Name="nombre" Mode="In" Type="String" />
+            <Parameter Name="correo" Mode="In" Type="String" />
+            <Parameter Name="usuario" Mode="In" Type="String" />
+            <Parameter Name="rol" Mode="In" Type="Int32" />
+            <Parameter Name="nombreUsuario" Mode="In" Type="String" />
           </FunctionImport>
         </EntityContainer>
         <EntityType Name="Usuarios">
@@ -195,6 +211,12 @@
           <Property Type="Int32" Name="cantidad" Nullable="false" />
           <Property Type="Double" Name="precio" Nullable="false" />
           <Property Type="String" Name="proveedor" Nullable="false" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="cargaDatos_Result">
+          <Property Type="String" Name="nombre" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="correo" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="usuario" Nullable="false" MaxLength="50" />
+          <Property Type="Int32" Name="rol" Nullable="false" />
         </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
@@ -287,6 +309,17 @@
           </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="loginUsuario" FunctionName="DB_ProductosModel.Store.loginUsuario" />
           <FunctionImportMapping FunctionImportName="eliminarUsuario" FunctionName="DB_ProductosModel.Store.eliminarUsuario" />
+          <FunctionImportMapping FunctionImportName="cargaDatos" FunctionName="DB_ProductosModel.Store.cargaDatos">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DB_ProductosModel.cargaDatos_Result">
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="correo" ColumnName="correo" />
+                <ScalarProperty Name="usuario" ColumnName="usuario" />
+                <ScalarProperty Name="rol" ColumnName="rol" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="actualizarUsuario" FunctionName="DB_ProductosModel.Store.actualizarUsuario" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

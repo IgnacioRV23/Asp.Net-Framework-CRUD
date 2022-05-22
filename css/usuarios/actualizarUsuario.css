@@ -1,17 +1,20 @@
-﻿body {
+﻿﻿body {
 }
 
-.container_crearUsuario {
+h2 {
+    text-align:center;
+}
+
+.container_forms {
     width: 500px;
-    margin: auto;
-    margin-top: 100px;
+    margin: 30px auto 0;
     padding-top: 30px;
     text-align: center;
     padding-bottom: 30px;
     background-color: #c0c0c0;
 }
 
-.container_crearUsuario *{
+.container_forms *{
     display:block;
     margin:auto;
 }
@@ -26,7 +29,7 @@
 
 .dropDown {
     outline:none;
-    width:200px;
+    width:205px;
 }
 
 .mensaje {
@@ -34,7 +37,7 @@
     margin-bottom: 30px;
 }
 
-.btn_crearUsuario {
+.btn_actualizar {
     color: #fff;
     width: 180px;
     border: none;
@@ -42,4 +45,9 @@
     cursor: pointer;
     border-radius: 5px;
     background-color: #000;
+}
+
+.container_grid {
+    margin:0 auto 50px;
+    width:max-content;
 }

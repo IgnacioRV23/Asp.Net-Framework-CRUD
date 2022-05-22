@@ -28,6 +28,13 @@
     <Parameter Name="precio" Type="float" Mode="In" />
     <Parameter Name="proveedor" Type="varchar" Mode="In" />
   </Function>
+  <Function Name="actualizarUsuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nombre" Type="varchar" Mode="In" />
+    <Parameter Name="correo" Type="varchar" Mode="In" />
+    <Parameter Name="usuario" Type="varchar" Mode="In" />
+    <Parameter Name="rol" Type="int" Mode="In" />
+    <Parameter Name="nombreUsuario" Type="varchar" Mode="In" />
+  </Function>
   <Function Name="AgregarProducto" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="nombre" Type="varchar" Mode="In" />
     <Parameter Name="cantidad" Type="int" Mode="In" />
@@ -46,6 +53,7 @@
     <Parameter Name="correo" Type="varchar" Mode="In" />
     <Parameter Name="contrasenia" Type="varchar" Mode="In" />
   </Function>
+  <Function Name="cargaDatos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
   <Function Name="eliminarProducto" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="id" Type="int" Mode="In" />
   </Function>

@@ -1,6 +1,11 @@
 ﻿body {
 }
 
+h2 {
+    text-align:center;
+    margin-top:40px;
+}
+
 .container_forms *{
     display:inline-block;
 }
@@ -8,7 +13,7 @@
 .container_forms {
     width: 50%;
     text-align: center;
-    margin: 40px auto 0px;
+    margin: auto;
     border-radius: 5px 5px 0 0;
     background-color: #c0c0c0;
 }
