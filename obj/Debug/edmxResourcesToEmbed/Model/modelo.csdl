@@ -61,6 +61,9 @@
       <Parameter Name="contrasenia" Mode="In" Type="String" />
       <Parameter Name="rol" Mode="InOut" Type="Int32" />
     </FunctionImport>
+    <FunctionImport Name="eliminarUsuario">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+    </FunctionImport>
   </EntityContainer>
   <EntityType Name="Usuarios">
     <Key>

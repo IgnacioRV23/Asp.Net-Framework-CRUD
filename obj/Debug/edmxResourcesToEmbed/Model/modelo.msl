@@ -85,5 +85,6 @@
       </ResultMapping>
     </FunctionImportMapping>
     <FunctionImportMapping FunctionImportName="loginUsuario" FunctionName="DB_ProductosModel.Store.loginUsuario" />
+    <FunctionImportMapping FunctionImportName="eliminarUsuario" FunctionName="DB_ProductosModel.Store.eliminarUsuario" />
   </EntityContainerMapping>
 </Mapping>
