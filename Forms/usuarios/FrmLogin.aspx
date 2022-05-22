@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>Iniciar sesión</title>
     <link href="../../css/usuarios/login.css" rel="stylesheet" />
-    <link href="../src/favicon.svg" rel="icon" />
+    <link href="../../src/favicon.svg" rel="icon" />
 </head>
 <body>
     <form id="frm1" runat="server">

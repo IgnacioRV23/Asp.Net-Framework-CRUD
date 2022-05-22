@@ -22,19 +22,8 @@
                 <h2 class="titulo_barra">Sistema de gestión - lector</h2>
             </div>
 
-            <div class="dropDown">
-                <p class="titulo_dropDown">Gestión de usuarios</p>
-
-                <div class="container_lista">
-                    <a href="#">Crear usuario</a>
-                    <a href="#">Eliminar usuario</a>
-                    <a href="#">Recuperar usuario</a>
-                    <a href="#">Actualizar usuario</a>
-                </div>
-            </div>
-
             <div>
-                <a href="#" class="btn_cerrar">Cerrar sesión</a>
+                <a href="../usuarios/FrmLogin.aspx" class="btn_cerrar">Cerrar sesión</a>
             </div>
         </div>
 

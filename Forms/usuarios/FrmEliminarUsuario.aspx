@@ -11,6 +11,8 @@
 </head>
 <body>
     <form id="frm1" runat="server">
+        <a href="FrmLogin.aspx" class="btn_regresar">Volver al login</a>
+
         <h2>Eliminar Usuarios</h2>
 
         <div class="container_forms">

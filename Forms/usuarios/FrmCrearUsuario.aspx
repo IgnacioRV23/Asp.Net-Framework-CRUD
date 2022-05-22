@@ -11,6 +11,9 @@
 </head>
 <body>
     <form id="frm1" runat="server">
+
+        <a href="FrmLogin.aspx" class="btn_regresar">Volver al login</a>
+
         <div>
             <div class="container_crearUsuario">
                 <h2>Crear usuario</h2>

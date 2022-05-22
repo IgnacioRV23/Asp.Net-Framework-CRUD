@@ -100,7 +100,7 @@ namespace CRUD___Aplicación___Web.Forms
 
                         //Cuando se crea un registro exitosamente se recarga la página, para evitar que cuando el usuario refresque la página, se dupliquen datos en la base de datos.
                         validaRegistro = true;
-                        Response.Redirect("./FrmGestionAdmin.aspx");
+                        Response.Redirect("../productos/FrmGestionAdmin.aspx");
                     }
                 }
                 else
@@ -135,6 +135,7 @@ namespace CRUD___Aplicación___Web.Forms
                         mensaje = "Resultado: Se ha actualizado el producto exitosamente.";
 
                         lblResultado.Text = mensaje;
+                        id = 0;
                         cargaTabla();
                         limpiarCampos();
                         btnAgregar.Visible = true;

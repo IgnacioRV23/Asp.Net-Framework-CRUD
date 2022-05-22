@@ -37,15 +37,15 @@ namespace CRUD___Aplicación___Web.Forms
                             switch (query)
                             {
                                 case 1:
-                                    Response.Redirect("./FrmGestionAdmin.aspx");
+                                    Response.Redirect("../productos/FrmGestionAdmin.aspx");
                                     break;
 
                                 case 2:
-                                    Response.Redirect("./FrmGestionEditor.aspx");
+                                    Response.Redirect("../productos/FrmGestionEditor.aspx");
                                     break;
 
                                 case 3:
-                                    Response.Redirect("./FrmGestionLector.aspx");
+                                    Response.Redirect("../productos/FrmGestionLector.aspx");
                                     break;
                             }
                         } else

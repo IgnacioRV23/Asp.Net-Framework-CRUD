@@ -4,47 +4,12 @@
 /*Apartado de estilos del encabezado de la página.*/
 .container_barra {
     display: grid;
-    grid-template-columns: min-content 68% max-content max-content;
+    grid-template-columns: min-content 68% max-content;
 }
 
 .imagen_logo {
     margin-top: 20px;
     margin-right: 10px;
-}
-
-/*Apartado que le da estilos al dropDown de usuarios*/
-.titulo_dropDown {
-    color: #fff;
-    cursor: pointer;
-    display: block;
-    border-radius: 5px;
-    background-color: #000;
-    margin: 15px 35px 2px 35px;
-    padding: 10px 30px 10px 30px;
-}
-
-.container_lista {
-    z-index: 1;
-    display: none;
-    margin-left: 35px;
-    border-radius: 3px;
-    position: absolute;
-    background-color: #000;
-}
-
-.container_lista a {
-    color: #fff;
-    padding: 18px;
-    display: block;
-    text-decoration: none;
-}
-
-.container_lista a:hover {
-    text-decoration: underline;
-}
-
-.dropDown:hover .container_lista {
-    display: block;
 }
 
 /*Estilos para el botón de cerrar sesión.*/
@@ -54,7 +19,7 @@
     margin-top:15px;
     border-radius: 5px;
     text-decoration: none;
-    background-color: #000;
+    background-color: red;
     padding: 10px 20px 10px 20px;
 }
 

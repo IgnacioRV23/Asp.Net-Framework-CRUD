@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using CRUD___Aplicación___Web.Model;
 
 namespace CRUD___Aplicación___Web.Forms
@@ -34,21 +35,31 @@ namespace CRUD___Aplicación___Web.Forms
         {
             if(validaCampos())
             {
-                var nombre = txtNombre.Text;
-                var correo = txtCorreo.Text;
-                var usuario = txtUsuario.Text;
-                var contrasenia = txtContrasenia.Text;
+                var nombre = txtNombre.Text.Trim();
+                var correo = txtCorreo.Text.Trim();
+                var usuario = txtUsuario.Text.Trim();
+                var contrasenia = txtContrasenia.Text.Trim();
                 var rol = dropUsuario.SelectedIndex;
 
                 try
                 {
                     using (DB_ProductosEntities context = new DB_ProductosEntities())
                     {
-                        context.agregarUsuario(nombre, correo, usuario, contrasenia, rol);
+                        var query = from Usuarios in context.Usuarios where Usuarios.usuario == usuario select Usuarios;
 
-                        limpiarCampos();
-                        validaCreado = true;
-                        Response.Redirect("./FrmCrearUsuario.aspx");
+                        if (query.Count() > 0)
+                        {
+                            lblMensaje.Text = "Mensaje: Error, ya existe ese usuario.";
+                        }
+                        else
+                        {
+
+                            context.agregarUsuario(nombre, correo, usuario, contrasenia, rol);
+
+                            limpiarCampos();
+                            validaCreado = true;
+                            Response.Redirect("./FrmCrearUsuario.aspx");
+                        }
                     }
                 } catch(Exception ex)
                 {
