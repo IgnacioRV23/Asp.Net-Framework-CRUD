@@ -2,6 +2,7 @@
 }
 
 .btn_regresar {
+    cursor:pointer;
     color:#fff;
     float:left;
     padding:10px 20px;

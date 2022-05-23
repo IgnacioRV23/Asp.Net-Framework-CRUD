@@ -2,6 +2,7 @@
 using System.Linq;
 using System.Web.UI.WebControls;
 using CRUD___Aplicación___Web.Model;
+using CRUD___Aplicación___Web.code;
 
 namespace CRUD___Aplicación___Web.Forms.usuarios
 {
@@ -49,6 +50,27 @@ namespace CRUD___Aplicación___Web.Forms.usuarios
             catch (Exception ex)
             {
                 Response.Write("<script>alert('Error: " + ex + "')</script>");
+            }
+        }
+
+        protected void btnRegresar_Click(object sender, EventArgs e)
+        {
+            Controlador c = new Controlador();
+
+            switch (c.RolUsuario)
+            {
+                case 1:
+                    Response.Redirect("../productos/FrmGestionAdmin.aspx");
+                    break;
+
+                case 2:
+                    Response.Redirect("../productos/FrmGestionEditor.aspx");
+                    break;
+
+                default:
+                    Response.Redirect("../usuarios/FrmLogin.aspx");
+                    c.RolUsuario = 0;
+                    break;
             }
         }
 
@@ -100,14 +122,17 @@ namespace CRUD___Aplicación___Web.Forms.usuarios
                     {
                         lblMensaje.Text = "Mensaje: Error, " + ex;
                     }
-                } else
+                }
+                else
                 {
                     lblMensaje.Text = "Mensaje: Error, faltan datos.";
                 }
-            } else
+            }
+            else
             {
                 lblMensaje.Text = "Mensaje: Error, seleccione un usuario.";
             }
         }
+
     }
 }

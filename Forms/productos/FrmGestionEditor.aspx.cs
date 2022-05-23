@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using System.Web.UI.WebControls;
+using CRUD___Aplicación___Web.code;
 using CRUD___Aplicación___Web.Model;
 
 namespace CRUD___Aplicación___Web.Forms
@@ -13,6 +14,7 @@ namespace CRUD___Aplicación___Web.Forms
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            registraRol();
             cargaTabla();
         }
 
@@ -33,6 +35,14 @@ namespace CRUD___Aplicación___Web.Forms
             {
                 lblResultado.Text = "Error: " + ex.ToString();
             }
+        }
+
+        private void registraRol()
+        {
+            Controlador c = new Controlador
+            {
+                RolUsuario = 2
+            };
         }
 
         //Permite seleccionar las filas del gridView.

@@ -1,7 +1,8 @@
-﻿using CRUD___Aplicación___Web.Model;
-using System;
+﻿using System;
 using System.Linq;
 using System.Web.UI.WebControls;
+using CRUD___Aplicación___Web.code;
+using CRUD___Aplicación___Web.Model;
 
 namespace CRUD___Aplicación___Web.Forms
 {
@@ -19,6 +20,7 @@ namespace CRUD___Aplicación___Web.Forms
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            registraRol();
             cargaTabla();
 
             if (validaRegistro)
@@ -54,6 +56,15 @@ namespace CRUD___Aplicación___Web.Forms
             txtPrecio.Text = "";
             txtProveedor.Text = "";
         }
+
+        private void registraRol()
+        {
+            Controlador c = new Controlador
+            {
+                RolUsuario = 1
+            };
+        }
+
 
         //Método que permite al gridView seleccionar los datos de la tabla.
         protected void gridProductos_SelectedIndexChanged(object sender, EventArgs e)

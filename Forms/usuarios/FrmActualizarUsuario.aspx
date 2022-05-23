@@ -12,7 +12,7 @@
 <body>
     <form id="frm1" runat="server">
 
-        <a href="FrmLogin.aspx" class="btn_regresar">Volver al login</a>
+        <asp:Button Text="Regresar" runat="server" CssClass="btn_regresar" ID = "btnRegresar" OnClick="btnRegresar_Click"/>
 
         <div class="container_forms">
             
