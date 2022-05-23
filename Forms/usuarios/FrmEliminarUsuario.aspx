@@ -11,7 +11,7 @@
 </head>
 <body>
     <form id="frm1" runat="server">
-        <a href="FrmLogin.aspx" class="btn_regresar">Volver al login</a>
+        <a href="../productos/FrmGestionAdmin.aspx" class="btn_regresar">Regresar</a>
 
         <h2>Eliminar Usuarios</h2>
 
@@ -34,7 +34,7 @@
         </div>
 
         <div class="container_grid">
-            <asp:GridView runat="server" ID="gridUsuarios" AutoGenerateSelectButton="True" RowStyle-HorizontalAlign="Center" CellPadding="15" AllowPaging="True" BackColor="White" BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px" ForeColor="Black" GridLines="Vertical" PageSize="8"
+            <asp:GridView runat="server" ID="gridUsuarios" AutoGenerateSelectButton="True" RowStyle-HorizontalAlign="Center" CellPadding="15" AllowPaging="True" BackColor="White" BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px" ForeColor="Black" GridLines="Vertical" PageSize="9"
                 OnPageIndexChanging="gridUsuarios_PageIndexChanging"
                 OnSelectedIndexChanged="gridUsuarios_SelectedIndexChanged">
                 <AlternatingRowStyle BackColor="#C0C0C0" />

@@ -4,7 +4,7 @@
 /*Apartado de estilos del encabezado de la página.*/
 .container_barra {
     display: grid;
-    grid-template-columns: min-content 68% max-content;
+    grid-template-columns: min-content 85% max-content;
 }
 
 .imagen_logo {
@@ -19,7 +19,7 @@
     margin-top:15px;
     border-radius: 5px;
     text-decoration: none;
-    background-color: red;
+    background-color: #000;
     padding: 10px 20px 10px 20px;
 }
 
@@ -33,7 +33,7 @@ hr {
 }
 
 .container_buscador {
-    width:30%;
+    width:40%;
     margin:auto;
     padding:20px;
     border-radius:5px;

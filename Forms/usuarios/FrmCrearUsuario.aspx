@@ -12,7 +12,7 @@
 <body>
     <form id="frm1" runat="server">
 
-        <a href="FrmLogin.aspx" class="btn_regresar">Volver al login</a>
+        <a href="../productos/FrmGestionAdmin.aspx" class="btn_regresar">Regresar</a>
 
         <div>
             <div class="container_crearUsuario">

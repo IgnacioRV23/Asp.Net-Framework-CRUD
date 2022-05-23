@@ -16,7 +16,7 @@
 
         <div class="container_forms">
             
-            <h2>Actualizar usuarios</h2>
+            <h2>Editar usuario</h2>
 
             <asp:TextBox runat="server" CssClass="campo_texto" ID="txtNombre" placeholder="Nombre" />
 

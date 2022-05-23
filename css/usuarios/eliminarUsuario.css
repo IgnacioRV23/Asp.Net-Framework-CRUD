@@ -12,8 +12,8 @@
 }
 
 h2 {
+    margin-top:30px;
     text-align:center;
-    margin-top:40px;
 }
 
 .container_forms *{
@@ -22,8 +22,8 @@ h2 {
 
 .container_forms {
     width: 50%;
-    text-align: center;
     margin: auto;
+    text-align: center;
     border-radius: 5px 5px 0 0;
     background-color: #c0c0c0;
 }
@@ -31,6 +31,7 @@ h2 {
 .campo_texto {
     outline:none;
     width:150px;
+    margin-right:20px;
     border-radius:3px;
     border-style:solid;
 }
