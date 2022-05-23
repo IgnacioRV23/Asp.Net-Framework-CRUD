@@ -8,7 +8,7 @@ namespace CRUD___Aplicación___Web.Forms
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            txtUsuario.Focus();
         }
 
         protected void btnIngresar_Click(object sender, EventArgs e)

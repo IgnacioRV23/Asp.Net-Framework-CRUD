@@ -89,6 +89,7 @@ namespace CRUD___Aplicación___Web.Forms
         {
             gridProductos.PageIndex = e.NewPageIndex;
             cargaTabla();
+            
         }
 
         //Método encargado de agregar productos a la base de datos.

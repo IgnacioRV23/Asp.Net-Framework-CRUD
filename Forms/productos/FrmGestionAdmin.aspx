@@ -97,7 +97,8 @@
         <h2 class="titulo_grid">Lista de productos</h2>
 
         <div class="container_grid">
-            <asp:GridView runat="server" ID="gridProductos" AutoGenerateSelectButton="True" OnSelectedIndexChanged="gridProductos_SelectedIndexChanged" RowStyle-HorizontalAlign="Center" CellPadding="15" AllowPaging="True" BackColor="White" BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px" ForeColor="Black" GridLines="Vertical" PageSize="8" OnPageIndexChanging="gridProductos_PageIndexChanging">
+            <asp:GridView runat="server" ID="gridProductos" AutoGenerateSelectButton="True" OnSelectedIndexChanged="gridProductos_SelectedIndexChanged" RowStyle-HorizontalAlign="Center" CellPadding="15" AllowPaging="True" BackColor="White" BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px" ForeColor="Black" GridLines="Vertical" PageSize="8"
+              OnPageIndexChanging="gridProductos_PageIndexChanging">
                 <AlternatingRowStyle BackColor="#C0C0C0" />
                 <FooterStyle BackColor="#CCCCCC" />
                 <HeaderStyle BackColor="Black" ForeColor="White" Font-Bold="True" />
