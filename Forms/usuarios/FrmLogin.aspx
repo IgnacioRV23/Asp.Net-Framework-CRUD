@@ -16,9 +16,9 @@
 
             <h2>Login</h2>
 
-            <asp:TextBox runat="server" id="txtUsuario" placeholder="Usuario" CssClass="campo_texto"/>
+            <asp:TextBox runat="server" id="txtUsuario" placeholder="Usuario" CssClass="campo_texto" Text="admin"/>
 
-            <asp:TextBox runat="server" id="txtContrasenia" placeholder="Contraseña" CssClass="campo_texto"/>
+            <asp:TextBox runat="server" id="txtContrasenia" placeholder="Contraseña" CssClass="campo_texto" Text="admin"/>
             
             <asp:Button Text="Ingresar" runat="server" CssClass="btn_ingresar" ID="btnIngresar" OnClick="btnIngresar_Click"/>
 

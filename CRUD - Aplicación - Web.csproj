@@ -73,6 +73,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include=".gitignore" />
     <Content Include="css\usuarios\actualizarUsuario.css" />
     <Content Include="css\usuarios\crearUsuario.css" />
     <Content Include="css\usuarios\eliminarUsuario.css" />
