@@ -1,7 +1,7 @@
 # Asp.Net Framework CRUD
 
 ## Introducción.
-Esta es una aplicación de escritorio que se creó utilizando la tecnología de Microsoft .Net Framework, con el objetivo de crear un sistema el cual pueda administrar productos y colaboradores, de manera automatizada, que permita conectarse con una base de datos.
+Aplicación web que permite gestionar un sistema de productos y usuarios, utilizando las tecnologías ASP .Net Framework, Entity Framework y SQL-Server.
 
 ## Características.
 - Aplicación creada en la web, que permite administrar usuarios y productos de inventario.
