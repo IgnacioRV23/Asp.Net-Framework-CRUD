@@ -63,51 +63,44 @@ hr {
 }
 
 /*Apartado de estilos del formulario.*/
-.container_agregar {
-    margin: 0px 350px 50px;
-    padding: 20px 50px;
-    border-radius: 3px;
+.container_formulario {
+    width: 400px;
+    margin: auto;
+    padding: 20px 10px;
     background-color: #c0c0c0;
 }
 
-.titulo_formulario {
-    margin:30px auto 20px;
-    width:max-content;
+.titulo-formulario {
+    text-align: center;
 }
 
-table {
-    margin: auto;
-}
-
-caption {
-    margin: 20px;
-    font-weight: bold;
-    font-size: larger;
-}
-
-td * {
-    margin: 20px 50px;
-}
-
-.campo_texto {
+.campo-texto {
+    width: 250px;
+    border: none;
     outline: none;
-    padding: initial 5px;
-    border: 1px solid #000;
+    display: block;
+    margin: 30px auto;
+    padding: 5px 10px;
 }
 
 .container_botones {
     text-align: center;
-    margin-top: 30px;
-    margin-bottom: 30px;
 }
 
-.btn_lector {
-    color: #fff;
-    width: 150px;
+.btn-admin {
     cursor: pointer;
+    color: #fff;
+    border: none;
+    margin: 5px;
     padding: 10px 15px;
-    border-radius: 3px;
+    border-radius: 5px;
     background-color: #000;
+}
+
+.lbl-resultado {
+    font-weight: bold;
+    margin: 10px auto;
+    display: block;
 }
 
 .titulo_grid {

@@ -15,11 +15,11 @@
 /*Apartado que le da estilos al dropDown de usuarios*/
 .titulo_dropDown {
     color: #fff;
-    cursor:pointer;
+    cursor: pointer;
     display: block;
     border-radius: 5px;
     background-color: #000;
-    margin:15px 35px 2px 35px;
+    margin: 15px 35px 2px 35px;
     padding: 10px 30px 10px 30px;
 }
 
@@ -27,31 +27,31 @@
     z-index: 1;
     display: none;
     margin-left: 35px;
-    border-radius:3px;
+    border-radius: 3px;
     position: absolute;
     background-color: #000;
 }
 
 .container_lista a {
-  color:#fff;
-  padding: 18px;
-  display: block;
-  text-decoration:none;
+    color: #fff;
+    padding: 18px;
+    display: block;
+    text-decoration: none;
 }
 
-.container_lista a:hover{
-  text-decoration:underline;
+.container_lista a:hover {
+    text-decoration: underline;
 }
 
 .dropDown:hover .container_lista {
-  display: block;
+    display: block;
 }
 
 /*Estilos para el botón de cerrar sesión.*/
 .btn_cerrar {
     color: #fff;
-    display:block;
-    margin-top:15px;
+    display: block;
+    margin-top: 15px;
     border-radius: 5px;
     text-decoration: none;
     background-color: #000;
@@ -63,58 +63,52 @@ hr {
 }
 
 /*Apartado de estilos del formulario.*/
-.container_agregar {
-    margin:0px 350px 30px;
-    padding:20px 50px;
-    border-radius:3px;
-    background-color:#c0c0c0;
+.container_formulario {
+    width: 400px;
+    margin: auto;
+    padding: 20px 10px;
+    background-color: #c0c0c0;
 }
 
-.titulo_formulario {
-    margin:30px auto 20px;
-    width:max-content;
+.titulo-formulario {
+    text-align: center;
 }
 
-table {
-    margin:auto;
-}
-
-caption {
-    margin:20px;
-    font-weight:bold;
-    font-size:larger;
-}
-
-td *{
-    margin: 20px 50px;
-}
-
-.campo_texto {
-    outline:none;
-    padding:initial 5px;
-    border:1px solid #000;
+.campo-texto {
+    width: 250px;
+    border: none;
+    outline: none;
+    display: block;
+    margin: 30px auto;
+    padding: 5px 10px;
 }
 
 .container_botones {
-    text-align:center;
-    margin-top:30px;
-    margin-bottom:30px;
+    text-align: center;
 }
 
-.btn_admin {
-    color:#fff;
-    width:150px;
-    cursor:pointer;
-    padding:10px 15px;
-    border-radius:3px;
-    background-color:#000;
+.btn-admin {
+    cursor: pointer;
+    color: #fff;
+    border: none;
+    margin: 5px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    background-color: #000;
+}
+
+.lbl-resultado {
+    font-weight:bold;
+    margin:10px auto;
+    display:block;
+}
+
+.container_pregunta {
+    text-align:right;
 }
 
 .btn_pregunta {
-    float:right;
-    cursor:pointer;
-    border-radius:3px;
-    margin-right: 40px;
+    margin:5px;
 }
 
 .btn_si {
@@ -130,10 +124,10 @@ td *{
 }
 
 .titulo_grid {
-    width:max-content;
-    margin:10px auto;
+    width: max-content;
+    margin: 10px auto;
 }
 
 .container_grid {
-    margin-bottom:50px;
+    margin-bottom: 50px;
 }

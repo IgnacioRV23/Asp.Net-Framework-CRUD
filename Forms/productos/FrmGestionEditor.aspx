@@ -25,7 +25,7 @@
             <div class="dropDown">
                 <p class="titulo_dropDown">Gestión de usuarios</p>
 
-                <div class="container_lista">                    
+                <div class="container_lista">
                     <a href="../usuarios/FrmActualizarUsuario.aspx">Actualizar usuario</a>
                 </div>
             </div>
@@ -37,51 +37,22 @@
 
         <hr />
 
-        <h2 class="titulo_formulario">Modificar productos</h2>
+        <div class="container_formulario">
+            <h2 class="titulo-formulario">Registro y modificación de productos</h2>
 
-        <div class="container_agregar">
+            <asp:TextBox runat="server" ID="txtNombre" CssClass="campo-texto" placeholder="Nombre" />
 
-            <table>
-                <caption>Datos del producto</caption>
-                <tr>
-                    <td>
-                        <p>Nombre:</p>
-                    </td>
-                    <td>
-                        <asp:TextBox runat="server" ID="txtNombre" CssClass="campo_texto" />
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <p>Cantidad:</p>
-                    </td>
-                    <td>
-                        <asp:TextBox runat="server" TextMode="Number" ID="txtCantidad" CssClass="campo_texto" />
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <p>Precio:</p>
-                    </td>
-                    <td>
-                        <asp:TextBox runat="server" TextMode="Number" ID="txtPrecio" CssClass="campo_texto" />
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <p>Proveedor:</p>
-                    </td>
-                    <td>
-                        <asp:TextBox runat="server" ID="txtProveedor" CssClass="campo_texto" />
-                    </td>
-                </tr>
-            </table>
+            <asp:TextBox runat="server" TextMode="Number" ID="txtCantidad" CssClass="campo-texto" placeholder="Cantidad" />
+
+            <asp:TextBox runat="server" TextMode="Number" ID="txtPrecio" CssClass="campo-texto" placeholder="Precio" />
+
+            <asp:TextBox runat="server" ID="txtProveedor" CssClass="campo-texto" placeholder="Proveedor" />
 
             <section class="container_botones">
-                <asp:Button Text="Actualizar" runat="server" ID="btnActualizar" CssClass="btn_lector" OnClick="btnActualizar_Click"/>
+                <asp:Button Text="Actualizar" runat="server" ID="btnActualizar" CssClass="btn-admin" OnClick="btnActualizar_Click" />
             </section>
 
-            <asp:Label Text="Resultado: " runat="server" ID="lblResultado" CssClass="lbl_resultado" Font-Bold="true" />
+            <asp:Label Text="Resultado: " runat="server" ID="lblResultado" CssClass="lbl-resultado" />
         </div>
 
         <h2 class="titulo_grid">Lista de productos</h2>

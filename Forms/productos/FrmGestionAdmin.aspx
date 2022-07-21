@@ -40,65 +40,38 @@
 
         <hr />
 
-        <h2 class="titulo_formulario">Registro y modificación de productos</h2>
+        <div class="container_formulario">
+            <h2 class="titulo-formulario">Registro y modificación de productos</h2>
 
-        <div class="container_agregar">
+            <asp:TextBox runat="server" ID="txtNombre" CssClass="campo-texto" placeholder="Nombre"/>
 
-            <table>
-                <caption>Datos del producto</caption>
-                <tr>
-                    <td>
-                        <p>Nombre:</p>
-                    </td>
-                    <td>
-                        <asp:TextBox runat="server" ID="txtNombre" CssClass="campo_texto" />
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <p>Cantidad:</p>
-                    </td>
-                    <td>
-                        <asp:TextBox runat="server" TextMode="Number" ID="txtCantidad" CssClass="campo_texto" />
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <p>Precio:</p>
-                    </td>
-                    <td>
-                        <asp:TextBox runat="server" TextMode="Number" ID="txtPrecio" CssClass="campo_texto" />
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <p>Proveedor:</p>
-                    </td>
-                    <td>
-                        <asp:TextBox runat="server" ID="txtProveedor" CssClass="campo_texto" />
-                    </td>
-                </tr>
-            </table>
+            <asp:TextBox runat="server" TextMode="Number" ID="txtCantidad" CssClass="campo-texto" placeholder="Cantidad"/>
+
+            <asp:TextBox runat="server" TextMode="Number" ID="txtPrecio" CssClass="campo-texto" placeholder="Precio"/>
+
+            <asp:TextBox runat="server" ID="txtProveedor" CssClass="campo-texto" placeholder="Proveedor"/>
 
             <section class="container_botones">
-                <asp:Button Text="Agregar" runat="server" ID="btnAgregar" CssClass="btn_admin" OnClick="btnAgregar_Click" />
+                <asp:Button Text="Agregar" runat="server" ID="btnAgregar" CssClass="btn-admin" OnClick="btnAgregar_Click" />
 
-                <asp:Button Text="Actualizar" runat="server" ID="btnActualizar" CssClass="btn_admin" OnClick="btnActualizar_Click" />
+                <asp:Button Text="Actualizar" runat="server" ID="btnActualizar" CssClass="btn-admin" OnClick="btnActualizar_Click" />
 
-                <asp:Button Text="Eliminar" runat="server" ID="btnEliminar" CssClass="btn_admin" OnClick="btnEliminar_Click" />
+                <asp:Button Text="Eliminar" runat="server" ID="btnEliminar" CssClass="btn-admin" OnClick="btnEliminar_Click" />
             </section>
 
-            <asp:Label Text="Resultado: " runat="server" ID="lblResultado" CssClass="lbl_resultado" Font-Bold="true" />
+            <asp:Label Text="Resultado: " runat="server" ID="lblResultado" CssClass="lbl-resultado"/>
 
-            <asp:Button Text="Si" runat="server" CssClass="btn_pregunta btn_si" Visible="False" ID="btnSi" OnClick="btnSi_Click" />
-            <asp:Button Text="No" runat="server" CssClass="btn_pregunta btn_no" Visible="False" ID="btnNo" OnClick="btnNo_Click" />
+            <div class="container_pregunta">
+                <asp:Button Text="Si" runat="server" CssClass="btn_pregunta btn_si" Visible="False" ID="btnSi" OnClick="btnSi_Click" />
+                <asp:Button Text="No" runat="server" CssClass="btn_pregunta btn_no" Visible="False" ID="btnNo" OnClick="btnNo_Click" />
+            </div>
         </div>
 
         <h2 class="titulo_grid">Lista de productos</h2>
 
         <div class="container_grid">
             <asp:GridView runat="server" ID="gridProductos" AutoGenerateSelectButton="True" OnSelectedIndexChanged="gridProductos_SelectedIndexChanged" RowStyle-HorizontalAlign="Center" CellPadding="15" AllowPaging="True" BackColor="White" BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px" ForeColor="Black" GridLines="Vertical" PageSize="8"
-              OnPageIndexChanging="gridProductos_PageIndexChanging">
+                OnPageIndexChanging="gridProductos_PageIndexChanging">
                 <AlternatingRowStyle BackColor="#C0C0C0" />
                 <FooterStyle BackColor="#CCCCCC" />
                 <HeaderStyle BackColor="Black" ForeColor="White" Font-Bold="True" />
