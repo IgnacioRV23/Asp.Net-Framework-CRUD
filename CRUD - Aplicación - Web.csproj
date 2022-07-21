@@ -82,6 +82,7 @@
     <Content Include="css\productos\gestionLector.css" />
     <Content Include="css\usuarios\login.css" />
     <Content Include="css\usuarios\recuperarContra.css" />
+    <Content Include="css\usuarios\usuariosAdmin.css" />
     <Content Include="Forms\usuarios\FrmActualizarUsuario.aspx" />
     <Content Include="Forms\usuarios\FrmCrearUsuario.aspx" />
     <Content Include="Forms\usuarios\FrmEliminarUsuario.aspx" />
@@ -90,6 +91,7 @@
     <Content Include="Forms\productos\FrmGestionLector.aspx" />
     <Content Include="Forms\usuarios\FrmLogin.aspx" />
     <Content Include="Forms\usuarios\FrmRecuperarContra.aspx" />
+    <Content Include="Forms\usuarios\FrmUsuariosAdmin.aspx" />
     <Content Include="Model\modelo.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>modelo.edmx</DependentUpon>
@@ -163,6 +165,13 @@
     </Compile>
     <Compile Include="Forms\usuarios\FrmRecuperarContra.aspx.designer.cs">
       <DependentUpon>FrmRecuperarContra.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\usuarios\FrmUsuariosAdmin.aspx.cs">
+      <DependentUpon>FrmUsuariosAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\usuarios\FrmUsuariosAdmin.aspx.designer.cs">
+      <DependentUpon>FrmUsuariosAdmin.aspx</DependentUpon>
     </Compile>
     <Compile Include="Model\cargaDatos_Result.cs">
       <DependentUpon>modelo.tt</DependentUpon>

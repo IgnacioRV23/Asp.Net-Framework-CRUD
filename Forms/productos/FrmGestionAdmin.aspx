@@ -19,7 +19,7 @@
             </div>
 
             <div>
-                <h2 class="titulo_barra">Sistema de gestión - admin</h2>
+                <h2 class="titulo-barra">Sistema de gestión admin</h2>
             </div>
 
             <div class="dropDown">
@@ -30,6 +30,7 @@
                     <a href="../usuarios/FrmEliminarUsuario.aspx">Eliminar usuario</a>
                     <a href="../usuarios/FrmRecuperarContra.aspx">Recuperar usuario</a>
                     <a href="../usuarios/FrmActualizarUsuario.aspx">Actualizar usuario</a>
+                    <a href="../usuarios/FrmUsuariosAdmin.aspx">Gestion usuarios</a>
                 </div>
             </div>
 

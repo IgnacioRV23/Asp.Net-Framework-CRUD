@@ -1,14 +1,11 @@
-﻿body {
-}
-
-/*Apartado de estilos del encabezado de la página.*/
+﻿/*Apartado de estilos del encabezado de la página.*/
 .container_barra {
     display: grid;
     grid-template-columns: min-content 68% max-content max-content;
 }
 
 .titulo-barra {
-    cursor:default;
+    cursor: default;
 }
 
 .imagen_logo {
@@ -66,77 +63,49 @@ hr {
     border-color: #000;
 }
 
-/*Estilos grid que da la estructura al formulario y gridView.*/
-.container_layout {
-    display: grid;
-    grid-template-rows: 1fr;
-    grid-template-columns: 1fr 2fr;
-}
-
 /*Apartado de estilos del formulario.*/
-.container_formulario {
-    height:max-content;
+.container_forms {
     width: 400px;
-    margin: 0px auto;
+    padding: 45px 5px;
     border-radius:5px;
-    padding: 20px 5px;
+    height:max-content;
+    text-align: center;
     background-color: #c0c0c0;
 }
 
-.titulo-formulario {
-    text-align: center;
+.container_forms * {
+    margin: auto;
+    display: block;
 }
 
-.campo-texto {
+
+.campo_texto {
+    border:none;
     width: 250px;
-    border: none;
     outline: none;
-    display: block;
-    margin: 45px auto;
+    padding:5px 10px;
+    margin:45px auto;
+}
+
+.dropDown {
+    border: none;
+    width: 270px;
+    outline: none;
     padding: 5px 10px;
 }
 
-.container_botones {
-    text-align: center;
+.mensaje {
+    margin: 30px auto;
 }
 
-.btn-admin {
-    cursor: pointer;
+.btn {
+    width:90px;
     color: #fff;
     border: none;
-    margin: 5px;
+    cursor: pointer;
+    margin: 0px 5px;
     padding: 10px 15px;
     border-radius: 5px;
+    display:inline-block;
     background-color: #000;
-}
-
-.lbl-resultado {
-    font-weight:bold;
-    margin:10px auto;
-    display:block;
-}
-
-.container_pregunta {
-    text-align:right;
-}
-
-.btn_pregunta {
-    margin:5px;
-}
-
-.btn_si {
-    color: #fff;
-    border-color: #00B000;
-    background-color: #00B000;
-}
-
-.btn_no {
-    color: #fff;
-    border-color: #f00;
-    background-color: #f00;
-}
-
-/*Estilos del dataGridView.*/
-.container_grid {
-    
 }
