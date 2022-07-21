@@ -62,6 +62,13 @@ hr {
     border-color: #000;
 }
 
+/*Estilos grid que da la estructura al formulario y gridView.*/
+.container_layout {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 2fr;
+}
+
 /*Apartado de estilos del formulario.*/
 .container_formulario {
     width: 400px;
@@ -79,7 +86,7 @@ hr {
     border: none;
     outline: none;
     display: block;
-    margin: 30px auto;
+    margin: 50px auto;
     padding: 5px 10px;
 }
 
@@ -123,11 +130,7 @@ hr {
     background-color: #f00;
 }
 
-.titulo_grid {
-    width: max-content;
-    margin: 10px auto;
-}
-
+/*Estilos del dataGridView.*/
 .container_grid {
-    margin-bottom: 50px;
+    
 }
