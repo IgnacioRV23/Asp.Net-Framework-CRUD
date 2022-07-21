@@ -12,29 +12,16 @@
 <body>
     <form id="form1" runat="server">
         <div class="container_barra">
-            <div>
-                <a href="FrmGestionAdmin.aspx">
-                    <img src="../../src/logo.svg" alt="logo" class="imagen_logo" />
+            <div class="nav-logo">
+                <a href="../productos/FrmGestionAdmin.aspx">
+                    <img src="../../src/logo.svg" alt="logo" class="" />
                 </a>
-            </div>
-
-            <div>
                 <h2 class="titulo-barra">Sistema de gestión admin</h2>
             </div>
-
-            <div class="dropDown">
-                <p class="titulo_dropDown">Gestión de usuarios</p>
-
-                <div class="container_lista">
-                    <a href="../usuarios/FrmCrearUsuario.aspx">Crear usuario</a>
-                    <a href="../usuarios/FrmEliminarUsuario.aspx">Eliminar usuario</a>
-                    <a href="../usuarios/FrmRecuperarContra.aspx">Recuperar usuario</a>
-                    <a href="../usuarios/FrmActualizarUsuario.aspx">Actualizar usuario</a>
-                </div>
-            </div>
-
-            <div>
-                <a href="../usuarios/FrmLogin.aspx" class="btn_cerrar">Cerrar sesión</a>
+            
+            <div class="nav-links">
+                <a href="../productos/FrmGestionAdmin.aspx" class="btn-link">Gestión Admin</a>
+                <a href="../usuarios/FrmLogin.aspx" class="btn-link">Cerrar sesión</a>
             </div>
         </div>
 
