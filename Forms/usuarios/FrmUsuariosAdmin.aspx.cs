@@ -16,21 +16,38 @@ namespace CRUD___Aplicación___Web.Forms.usuarios
 
         static bool validaCreado;
 
+        private static int id;
+        
+        private static int mensajeEliminar;
+
+        static bool validaEliminar;
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            //Validaciones del apartado de crear usuario.
             if (validaCreado)
             {
                 lblMensaje.Text = "Mensaje: Usuario creado exitosamente.";
                 validaCreado = false;
             }
 
+            //Validaciones del apartado de actualizar usuario.
             if (mensaje)
             {
                 lblMensaje.Text = "Mensaje: Datos del usuario actualizados exitosamente.";
 
                 mensaje = false;
             }
+
+            //Validacioned del apartado de eliminar usuario.
+            if (mensajeEliminar == 1)
+            {
+                Response.Write("<script>alert('Resultado: Usuario eliminado de manera correcta.')</script>");
+
+                mensajeEliminar = 0;
+            }
+
+            muestraElementos(0);
 
             cargaTabla();
         }
@@ -84,6 +101,8 @@ namespace CRUD___Aplicación___Web.Forms.usuarios
             btnAgregar.Enabled = false;
             lblMensaje.Text = "Mensaje: Usuario seleccionado.";
             validaSelect = true;
+            validaEliminar = true;
+            id = int.Parse(fila.Cells[1].Text);
         }
 
 
@@ -105,6 +124,7 @@ namespace CRUD___Aplicación___Web.Forms.usuarios
             return valida;
         }
 
+        //Método de creación de usuarios.
         protected void btnCrearUsuario_Click(object sender, EventArgs e)
         {
             if (validaCampos())
@@ -147,6 +167,7 @@ namespace CRUD___Aplicación___Web.Forms.usuarios
             }
         }
 
+        //Método de actualización de usuarios.
         protected void btnActualizar_Click(object sender, EventArgs e)
         {
             var nombre = txtNombre.Text;
@@ -187,5 +208,66 @@ namespace CRUD___Aplicación___Web.Forms.usuarios
             }
         }
 
+
+        //Métodos de eliminación de usuarios.
+        private void muestraElementos(int opcion)
+        {
+            switch (opcion)
+            {
+                case 0:
+                    btnSi.Visible = false;
+                    btnNo.Visible = false;
+                    break;
+
+                case 1:
+                    btnSi.Visible = true;
+                    btnNo.Visible = true;
+                    break;
+            }
+        }
+
+        protected void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (validaEliminar)
+            {
+                lblMensaje.Text = "¿Seguro que desea eliminar este usuario?";
+                muestraElementos(1);
+            }
+            else
+            {
+                Response.Write("<script>alert('Error, seleccione un usuario.')</script>");
+            }
+        }
+
+        protected void btnSi_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                using (DB_ProductosEntities context = new DB_ProductosEntities())
+                {
+                    context.eliminarUsuario(id);
+
+                    txtNombre.Text = "";
+                    txtUsuario.Text = "";
+                    validaEliminar = false;
+                    id = 0;
+                    cargaTabla();
+
+                    mensajeEliminar = 1;
+                    Response.Redirect("./FrmUsuariosAdmin.aspx");
+                }
+            }
+            catch (Exception ex)
+            {
+                Response.Write("<script>alert('Error: " + ex + "')</script>");
+            }
+        }
+
+        protected void btnNo_Click(object sender, EventArgs e)
+        {
+            muestraElementos(0);
+            id = 0;
+            lblMensaje.Text = "Resultado: No se eliminó el registro.";
+        }
     }
 }

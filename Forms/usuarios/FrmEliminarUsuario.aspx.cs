@@ -8,16 +8,16 @@ namespace CRUD___Aplicación___Web.Forms
     public partial class FrmEliminarUsuario : System.Web.UI.Page
     {
         private static int id;
-        private static int mensaje;
+        private static int mensajeEliminar;
         private static bool validaSelect;
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (mensaje == 1)
+            if (mensajeEliminar == 1)
             {
                 Response.Write("<script>alert('Resultado: Usuario eliminado de manera correcta.')</script>");
 
-                mensaje = 0;
+                mensajeEliminar = 0;
             }
 
             muestraElementos(0);
@@ -102,7 +102,7 @@ namespace CRUD___Aplicación___Web.Forms
                     id = 0;
                     cargaTabla();
 
-                    mensaje = 1;
+                    mensajeEliminar = 1;
                     Response.Redirect("./FrmEliminarUsuario.aspx");
                 }
             } catch (Exception ex)
