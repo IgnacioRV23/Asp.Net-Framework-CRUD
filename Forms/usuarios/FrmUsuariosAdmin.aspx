@@ -34,6 +34,8 @@
                 <asp:TextBox runat="server" ID="txtNombre" CssClass="campo-texto" placeholder="Nombre" />
 
                 <asp:TextBox runat="server" ID="txtUsuario" CssClass="campo-texto" placeholder="Usuario" />
+                
+                <asp:TextBox runat="server" ID="txtContrasenia" CssClass="campo-texto" placeholder="Contraseña" />
 
                 <asp:TextBox runat="server" ID="txtCorreo" CssClass="campo-texto" placeholder="Correo" />
 
@@ -45,7 +47,7 @@
                 </asp:DropDownList>
 
                 <section class="container_botones">
-                    <asp:Button Text="Agregar" runat="server" ID="btnAgregar" CssClass="btn-admin"/>
+                    <asp:Button Text="Agregar" runat="server" ID="btnAgregar" CssClass="btn-admin" OnClick="btnCrearUsuario_Click"/>
 
                     <asp:Button Text="Actualizar" runat="server" ID="btnActualizar" CssClass="btn-admin" OnClick="btnActualizar_Click"/>
 
