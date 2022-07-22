@@ -13,14 +13,14 @@
     <form id="frm1" runat="server">
         <div class="container_barra">
             <div class="nav-logo">
-                <a href="../productos/FrmGestioneditor.aspx">
+                <a href="FrmGestionEditor.aspx">
                     <img src="../../src/logo.svg" alt="logo" class="" />
                 </a>
                 <h2 class="titulo-barra">Sistema de gestión editor</h2>
             </div>
             
             <div class="nav-links">
-                <a href="../usuarios/FrmUsuariosAdmin.aspx" class="btn-link">Gestión usuarios</a>
+                <a href="../usuarios/FrmUsuariosEditor.aspx" class="btn-link">Gestión usuarios</a>
                 <a href="../usuarios/FrmLogin.aspx" class="btn-link">Cerrar sesión</a>
             </div>
         </div>

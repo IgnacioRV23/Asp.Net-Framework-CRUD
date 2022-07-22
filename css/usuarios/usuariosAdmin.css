@@ -89,6 +89,17 @@ hr {
     background-color: #000;
 }
 
+.btn-editor {
+    color: #fff;
+    margin: 5px;
+    width: 250px;
+    border: none;
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 5px;
+    background-color: #000;
+}
+
 .lbl-mensaje {
     font-weight: bold;
     margin: 10px auto;
