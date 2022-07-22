@@ -89,7 +89,7 @@ namespace CRUD___Aplicación___Web.Forms
                     var cantidad = int.Parse(txtCantidad.Text);
                     var precio = float.Parse(txtPrecio.Text);
                     var proveedor = txtProveedor.Text;
-                    
+
 
                     try
                     {
@@ -104,7 +104,8 @@ namespace CRUD___Aplicación___Web.Forms
                             limpiarCampos();
                             validaSeleccion = false;
                         }
-                    } catch(Exception)
+                    }
+                    catch (Exception)
                     {
                         mensaje = "Resultado: Ha ocurrido un error";
                         lblResultado.Text = mensaje;
@@ -115,7 +116,8 @@ namespace CRUD___Aplicación___Web.Forms
                     mensaje = "Resultado: Error, datos incompletos.";
                     lblResultado.Text = mensaje;
                 }
-            } else
+            }
+            else
             {
                 mensaje = "Resultado: Error, seleccione un registro.";
                 lblResultado.Text = mensaje;

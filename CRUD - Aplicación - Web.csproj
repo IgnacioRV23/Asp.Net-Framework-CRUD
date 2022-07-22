@@ -74,18 +74,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include=".gitignore" />
-    <Content Include="css\usuarios\actualizarUsuario.css" />
-    <Content Include="css\usuarios\crearUsuario.css" />
-    <Content Include="css\usuarios\eliminarUsuario.css" />
     <Content Include="css\productos\gestionAdmin.css" />
     <Content Include="css\productos\gestionEditor.css" />
     <Content Include="css\productos\gestionLector.css" />
     <Content Include="css\usuarios\login.css" />
     <Content Include="css\usuarios\recuperarContra.css" />
     <Content Include="css\usuarios\usuariosAdmin.css" />
-    <Content Include="Forms\usuarios\FrmActualizarUsuario.aspx" />
-    <Content Include="Forms\usuarios\FrmCrearUsuario.aspx" />
-    <Content Include="Forms\usuarios\FrmEliminarUsuario.aspx" />
     <Content Include="Forms\productos\FrmGestionAdmin.aspx" />
     <Content Include="Forms\productos\FrmGestionEditor.aspx" />
     <Content Include="Forms\productos\FrmGestionLector.aspx" />
@@ -110,27 +104,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="code\Controlador.cs" />
-    <Compile Include="Forms\usuarios\FrmActualizarUsuario.aspx.cs">
-      <DependentUpon>FrmActualizarUsuario.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Forms\usuarios\FrmActualizarUsuario.aspx.designer.cs">
-      <DependentUpon>FrmActualizarUsuario.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\usuarios\FrmCrearUsuario.aspx.cs">
-      <DependentUpon>FrmCrearUsuario.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Forms\usuarios\FrmCrearUsuario.aspx.designer.cs">
-      <DependentUpon>FrmCrearUsuario.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\usuarios\FrmEliminarUsuario.aspx.cs">
-      <DependentUpon>FrmEliminarUsuario.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Forms\usuarios\FrmEliminarUsuario.aspx.designer.cs">
-      <DependentUpon>FrmEliminarUsuario.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Forms\productos\FrmGestionAdmin.aspx.cs">
       <DependentUpon>FrmGestionAdmin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
