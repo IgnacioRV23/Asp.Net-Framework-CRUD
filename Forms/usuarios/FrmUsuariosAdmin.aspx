@@ -33,9 +33,9 @@
 
                 <asp:TextBox runat="server" ID="txtNombre" CssClass="campo-texto" placeholder="Nombre" />
 
-                <asp:TextBox runat="server" ID="txtCantidad" CssClass="campo-texto" placeholder="Usuario" />
+                <asp:TextBox runat="server" ID="txtUsuario" CssClass="campo-texto" placeholder="Usuario" />
 
-                <asp:TextBox runat="server" ID="txtPrecio" CssClass="campo-texto" placeholder="Correo" />
+                <asp:TextBox runat="server" ID="txtCorreo" CssClass="campo-texto" placeholder="Correo" />
 
                 <asp:DropDownList runat="server" CssClass="dropDown" ID="dropUsuario">
                     <asp:ListItem Text="Rol de usuario" />
@@ -47,12 +47,12 @@
                 <section class="container_botones">
                     <asp:Button Text="Agregar" runat="server" ID="btnAgregar" CssClass="btn-admin"/>
 
-                    <asp:Button Text="Actualizar" runat="server" ID="btnActualizar" CssClass="btn-admin"/>
+                    <asp:Button Text="Actualizar" runat="server" ID="btnActualizar" CssClass="btn-admin" OnClick="btnActualizar_Click"/>
 
                     <asp:Button Text="Eliminar" runat="server" ID="btnEliminar" CssClass="btn-admin"/>
                 </section>
 
-                <asp:Label Text="Resultado: " runat="server" ID="lblResultado" CssClass="lbl-resultado" />
+                <asp:Label Text="Resultado: " runat="server" ID="lblMensaje" CssClass="lbl-mensaje" />
 
                 <div class="container_pregunta">
                     <asp:Button Text="Si" runat="server" CssClass="btn_pregunta btn_si" Visible="False" ID="btnSi"/>

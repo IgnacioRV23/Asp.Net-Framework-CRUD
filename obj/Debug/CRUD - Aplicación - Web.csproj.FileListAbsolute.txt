@@ -42,6 +42,7 @@ C:\Users\admin\source\repos\CRUD - Aplicación - Web\obj\Debug\CRUD - Aplicació
 C:\Users\admin\source\repos\CRUD - Aplicación - Web\obj\Debug\CRUD - Aplicación - Web.csproj.CopyComplete
 C:\Users\admin\source\repos\CRUD - Aplicación - Web\obj\Debug\CRUD - Aplicación - Web.dll
 C:\Users\admin\source\repos\CRUD - Aplicación - Web\obj\Debug\CRUD - Aplicación - Web.pdb
+C:\Users\admin\Documents\Proyectos-Propios\CRUD - Aplicación - Web\bin\EntityFramework.dll
 C:\Users\admin\Documents\Proyectos-Propios\CRUD - Aplicación - Web\bin\CRUD - Aplicación - Web.dll.config
 C:\Users\admin\Documents\Proyectos-Propios\CRUD - Aplicación - Web\bin\CRUD - Aplicación - Web.dll
 C:\Users\admin\Documents\Proyectos-Propios\CRUD - Aplicación - Web\bin\CRUD - Aplicación - Web.pdb
@@ -75,7 +76,6 @@ C:\Users\admin\Documents\Proyectos-Propios\CRUD - Aplicación - Web\bin\roslyn\v
 C:\Users\admin\Documents\Proyectos-Propios\CRUD - Aplicación - Web\bin\roslyn\vbc.rsp
 C:\Users\admin\Documents\Proyectos-Propios\CRUD - Aplicación - Web\bin\roslyn\VBCSCompiler.exe
 C:\Users\admin\Documents\Proyectos-Propios\CRUD - Aplicación - Web\bin\roslyn\VBCSCompiler.exe.config
-C:\Users\admin\Documents\Proyectos-Propios\CRUD - Aplicación - Web\bin\EntityFramework.dll
 C:\Users\admin\Documents\Proyectos-Propios\CRUD - Aplicación - Web\bin\EntityFramework.SqlServer.dll
 C:\Users\admin\Documents\Proyectos-Propios\CRUD - Aplicación - Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Users\admin\Documents\Proyectos-Propios\CRUD - Aplicación - Web\bin\EntityFramework.xml
