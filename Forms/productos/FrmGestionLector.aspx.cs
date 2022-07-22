@@ -37,7 +37,7 @@ namespace CRUD___Aplicación___Web.Forms
             cargaTabla();
         }
 
-        protected void txtBuscador_TextChanged(object sender, EventArgs e)
+        private void buscaProductos()
         {
             string nombre;
 
@@ -48,13 +48,14 @@ namespace CRUD___Aplicación___Web.Forms
             if (txtBuscador.Text.Equals(""))
             {
                 cargaTabla();
-            } else
+            }
+            else
             {
                 try
                 {
                     using (DB_ProductosEntities context = new DB_ProductosEntities())
                     {
-                        switch(opcion)
+                        switch (opcion)
                         {
                             case 0:
                                 nombre = txtBuscador.Text.Trim();
@@ -115,11 +116,29 @@ namespace CRUD___Aplicación___Web.Forms
                                 break;
                         }
                     }
-                } catch (Exception ex)
+                }
+                catch (Exception ex)
                 {
                     Response.Write("<script>alert('" + ex + "');</script>");
                 }
             }
+        }
+
+        protected void txtBuscador_TextChanged(object sender, EventArgs e)
+        {
+            buscaProductos();
+        }
+
+        protected void btnBuscar_Click(object sender, EventArgs e)
+        {
+            buscaProductos();
+        }
+
+        protected void btnReiniciar_Click(object sender, EventArgs e)
+        {
+            txtBuscador.Text = "";
+            dropOpciones.SelectedIndex = 0;
+            cargaTabla();
         }
     }
 }

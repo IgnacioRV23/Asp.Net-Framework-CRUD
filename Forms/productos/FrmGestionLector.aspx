@@ -29,15 +29,20 @@
 
         <hr />
 
-        <div class="container_forms">
-            <h2 class="titulo_buscador">Buscardor de productos</h2>
+        <div class="container_grid">
+            <div class="container-buscador">
+                <h2 class="titulo-buscador">Buscador</h2>
+                <div class="container-input">
+                    <img src="../../src/buscador.svg" alt="buscador"/>
+                    <asp:TextBox runat="server" class="buscador" ID="txtBuscador" placeholder="Buscador" OnTextChanged="txtBuscador_TextChanged" />
+                </div>
 
-            <div class="container_buscador">
-                <img src="../../src/buscador.svg" alt="buscador" class="img_buscador" />
-                <asp:TextBox runat="server" class="buscador" ID="txtBuscador" placeholder="Buscador" OnTextChanged="txtBuscador_TextChanged" />
+                <asp:Button Text="Buscar" runat="server" class="btn" id="btnBuscar" OnClick="btnBuscar_Click"/>
 
-                <asp:DropDownList runat="server" CssClass="drop_opciones" ID="dropOpciones">
-                    <asp:ListItem Text="Elegir filtro" />
+                <asp:Button Text="Reiniciar" runat="server" class="btn" ID="btnReiniciar" OnClick="btnReiniciar_Click"/>
+
+                <asp:DropDownList runat="server" CssClass="drop-opciones" ID="dropOpciones">
+                    <asp:ListItem Text="Elegir filtro"/>
                     <asp:ListItem Text="ID" />
                     <asp:ListItem Text="Nombre" />
                     <asp:ListItem Text="Cantidad" />
@@ -46,11 +51,9 @@
                 </asp:DropDownList>
             </div>
 
-            <h2 class="titulo_grid">Lista de productos</h2>
-
-            <div class="container_grid">
-                <asp:GridView runat="server" ID="gridProductos"  RowStyle-HorizontalAlign="Center" CellPadding="15" AllowPaging="True" BackColor="White" BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px" ForeColor="Black" GridLines="Vertical" PageSize="8"
-                    OnPageIndexChanging="gridProductos_PageIndexChanging" EmptyDataText="No se encontró ningún resultado">
+            <div class="container-gridView">
+                <asp:GridView runat="server" ID="gridProductos" RowStyle-HorizontalAlign="Center" CellPadding="15" AllowPaging="True" BackColor="White" BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px" ForeColor="Black" GridLines="Vertical" PageSize="8"
+                    OnPageIndexChanging="gridProductos_PageIndexChanging" EmptyDataText="No se encontró ningún resultado" Width="100%">
                     <AlternatingRowStyle BackColor="#C0C0C0" />
                     <FooterStyle BackColor="#CCCCCC" />
                     <HeaderStyle BackColor="Black" ForeColor="White" Font-Bold="True" />

@@ -27,46 +27,67 @@ hr {
     border-color: #000;
 }
 
-/*Estilos de los elementos del buscador.*/
-.titulo_buscador {
-    text-align:center;
+/*Apartado de estilos del formulario.*/
+.container_grid {
+    display:grid;
+    grid-template-rows:100%;
+    grid-template-columns:min-content auto;
 }
 
-.container_buscador {
-    width:40%;
-    margin:auto;
-    padding:20px;
-    border-radius:5px;
+
+.container-buscador {
+    margin:0 20px;
+    padding: 10px 30px;
+    width:min-content;
+    text-align: center;
+    height:min-content;
+    border-radius:10px;
     background-color: #c0c0c0;
 }
 
-.img_buscador {
-    vertical-align:bottom;
+.container-buscador * {
+    margin: auto;
+    display:block;
+}
+
+.titulo-buscador {
+    margin:20px auto;
+}
+
+.container-input {
+    padding: 0 15px;
+    display:flex;
+    width:min-content;
+    border-radius:10px;
+    background-color:#fff;
+}
+
+.container-input * {
+    display:inline-block;
 }
 
 .buscador {
+    padding:10px;
     outline:none;
-    width:200px;
-    border-radius:5px;
-    border-style:solid;
+    border:none;
 }
 
-.drop_opciones {
-    width: 100px;
-    float: right;
-    outline: none;
-    margin-top: 3px;
+.btn {
+    color: #fff;
+    width:150px;
+    cursor:pointer;
+    padding:5px 10px;
+    margin:50px auto;
     border-radius: 5px;
-    border: 2px solid #767676;
+    text-decoration: none;
+    background-color: #000;
 }
 
-/*Estilos del gridView.*/
-.titulo_grid {
-    margin-top:40px;
-    text-align:center;
-}
-
-.container_grid {
-    margin:auto;
-    width:max-content;
+.drop-opciones {
+    color: #fff;
+    width: 150px;
+    padding: 5px;
+    margin: 50px auto;
+    border-radius: 5px;
+    background-color: #000;
 }
