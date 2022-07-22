@@ -10,7 +10,7 @@
     <title>Administrar usuarios</title>
 </head>
 <body>
-    <form id="form1" runat="server">
+    <form id="frm1" runat="server">
         <div class="container_barra">
             <div class="nav-logo">
                 <a href="../productos/FrmGestionAdmin.aspx">
@@ -20,48 +20,58 @@
             </div>
             
             <div class="nav-links">
-                <a href="../productos/FrmGestionAdmin.aspx" class="btn-link">Gestión Admin</a>
+                <a href="../productos/FrmGestionAdmin.aspx" class="btn-link">Gestión productos</a>
                 <a href="../usuarios/FrmLogin.aspx" class="btn-link">Cerrar sesión</a>
             </div>
         </div>
 
         <hr />
 
-         <div class="container_forms">
-             <h2>Registro y modificación de usuarios</h2>
-            <asp:TextBox runat="server" CssClass="campo_texto" ID="txtNombre" placeholder="Nombre" />
+        <div class="container_layout">
+            <div class="container_formulario">
+                <h2 class="titulo-formulario">Registro y modificación de usurios</h2>
 
-            <asp:TextBox runat="server" CssClass="campo_texto" ID="txtCorreo" placeholder="Correo" />
+                <asp:TextBox runat="server" ID="txtNombre" CssClass="campo-texto" placeholder="Nombre" />
 
-            <asp:TextBox runat="server" CssClass="campo_texto" ID="txtUsuario" placeholder="Usuario" />
+                <asp:TextBox runat="server" ID="txtCantidad" CssClass="campo-texto" placeholder="Usuario" />
 
-            <asp:DropDownList runat="server" CssClass="dropDown" ID="dropUsuario">
-                <asp:ListItem Text="Rol de usuario" />
-                <asp:ListItem Text="Administrador" />
-                <asp:ListItem Text="Editor" />
-                <asp:ListItem Text="Lector" />
-            </asp:DropDownList>
+                <asp:TextBox runat="server" ID="txtPrecio" CssClass="campo-texto" placeholder="Correo" />
 
-            <asp:Label Text="Mensaje:" runat="server" CssClass="mensaje" ID="lblMensaje" />
+                <asp:DropDownList runat="server" CssClass="dropDown" ID="dropUsuario">
+                    <asp:ListItem Text="Rol de usuario" />
+                    <asp:ListItem Text="Administrador" />
+                    <asp:ListItem Text="Editor"/>
+                    <asp:ListItem Text="Lector" />
+                </asp:DropDownList>
 
-            <asp:Button Text="Crear" runat="server" CssClass="btn" ID="btnCrear"/>
+                <section class="container_botones">
+                    <asp:Button Text="Agregar" runat="server" ID="btnAgregar" CssClass="btn-admin"/>
 
-            <asp:Button Text="Actualizar" runat="server" CssClass="btn" ID="btnActualizar"/>
+                    <asp:Button Text="Actualizar" runat="server" ID="btnActualizar" CssClass="btn-admin"/>
 
-            <asp:Button Text="Eliminar" runat="server" CssClass="btn" ID="btnEliminar"/>
-        </div>
+                    <asp:Button Text="Eliminar" runat="server" ID="btnEliminar" CssClass="btn-admin"/>
+                </section>
 
-        <div class="container_grid">
-            <asp:GridView runat="server" ID="gridUsuarios" AutoGenerateSelectButton="True" RowStyle-HorizontalAlign="Center" CellPadding="15" AllowPaging="True" BackColor="White" BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px" ForeColor="Black" GridLines="Vertical" PageSize="8"
-                OnPageIndexChanging="gridUsuarios_PageIndexChanging"
-                OnSelectedIndexChanged="gridUsuarios_SelectedIndexChanged">
-                <AlternatingRowStyle BackColor="#C0C0C0" />
-                <FooterStyle BackColor="#CCCCCC" />
-                <HeaderStyle BackColor="Black" ForeColor="White" Font-Bold="True" />
-                <PagerStyle BackColor="#999999" ForeColor="Black" HorizontalAlign="Center" Wrap="True" />
-                <RowStyle HorizontalAlign="Center"></RowStyle>
-            </asp:GridView>
+                <asp:Label Text="Resultado: " runat="server" ID="lblResultado" CssClass="lbl-resultado" />
+
+                <div class="container_pregunta">
+                    <asp:Button Text="Si" runat="server" CssClass="btn_pregunta btn_si" Visible="False" ID="btnSi"/>
+                    <asp:Button Text="No" runat="server" CssClass="btn_pregunta btn_no" Visible="False" ID="btnNo"/>
+                </div>
+            </div>
+
+            <div class="container_grid">
+                <asp:GridView runat="server" ID="gridUsuarios" AutoGenerateSelectButton="True" OnSelectedIndexChanged="gridUsuarios_SelectedIndexChanged" RowStyle-HorizontalAlign="Center" CellPadding="15" AllowPaging="True" BackColor="White" BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px" ForeColor="Black" GridLines="Vertical" PageSize="8"
+                    OnPageIndexChanging="gridUsuarios_PageIndexChanging" Width="100%">
+                    <AlternatingRowStyle BackColor="#C0C0C0" />
+                    <FooterStyle BackColor="#CCCCCC" />
+                    <HeaderStyle BackColor="Black" ForeColor="White" Font-Bold="True" />
+                    <PagerStyle BackColor="#999999" ForeColor="Black" HorizontalAlign="Center" Wrap="True" />
+                    <RowStyle HorizontalAlign="Center"></RowStyle>
+                </asp:GridView>
+            </div>
         </div>
     </form>
+    
 </body>
 </html>

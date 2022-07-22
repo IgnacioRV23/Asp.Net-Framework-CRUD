@@ -1,83 +1,116 @@
 ﻿/*Apartado de estilos del menú de navegación de la página.*/
 .container_barra {
-    display:grid;
-    grid-template-rows:100%;
-    grid-template-columns:max-content auto;
+    display: grid;
+    grid-template-rows: 100%;
+    grid-template-columns: max-content auto;
 }
 
 .nav-logo {
-    display:flex;
-    align-items:center;
+    display: flex;
+    align-items: center;
 }
 
 .titulo-barra {
-    margin:10px;
-    cursor:default;
+    margin: 10px;
+    cursor: default;
 }
 
 .nav-links {
-    display:flex;
-    align-items:center;
-    justify-content:flex-end;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
 }
 
 .btn-link {
-    color:#fff;
-    margin:0 10px;
-    cursor:pointer;
-    padding:10px 30px;
-    border-radius:5px;
-    text-decoration:none;
-    background-color:#000;
+    color: #fff;
+    margin: 0 10px;
+    cursor: pointer;
+    padding: 10px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    background-color: #000;
 }
 
 hr {
     border-color: #000;
 }
 
+/*Estilos grid que da la estructura al formulario y gridView.*/
+.container_layout {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 2fr;
+}
+
 /*Apartado de estilos del formulario.*/
-.container_forms {
+.container_formulario {
+    height: max-content;
     width: 400px;
-    padding: 45px 5px;
-    border-radius:5px;
-    height:max-content;
-    text-align: center;
+    margin: 0px auto;
+    border-radius: 5px;
+    padding: 20px 5px;
     background-color: #c0c0c0;
 }
 
-.container_forms * {
-    margin: auto;
-    display: block;
+.titulo-formulario {
+    text-align: center;
 }
 
-
-.campo_texto {
-    border:none;
+.campo-texto {
     width: 250px;
-    outline: none;
-    padding:5px 10px;
-    margin:45px auto;
-}
-
-.dropDown {
     border: none;
-    width: 270px;
     outline: none;
+    display: block;
+    margin: 45px auto;
     padding: 5px 10px;
 }
 
-.mensaje {
-    margin: 30px auto;
+.dropDown {
+    width:270px;
+    margin: auto;
+    display: block;
+    outline: none;
+    margin-bottom: 45px;
+    border: none;
+    padding: 5px 10px;
 }
 
-.btn {
-    width:90px;
+.container_botones {
+    text-align: center;
+}
+
+.btn-admin {
+    cursor: pointer;
     color: #fff;
     border: none;
-    cursor: pointer;
-    margin: 0px 5px;
+    margin: 5px;
     padding: 10px 15px;
     border-radius: 5px;
-    display:inline-block;
     background-color: #000;
+}
+
+.lbl-resultado {
+    font-weight: bold;
+    margin: 10px auto;
+    display: block;
+}
+
+.container_pregunta {
+    text-align: right;
+}
+
+.btn_pregunta {
+    margin: 5px;
+}
+
+.btn_si {
+    color: #fff;
+    border-color: #00B000;
+    background-color: #00B000;
+}
+
+.btn_no {
+    color: #fff;
+    border-color: #f00;
+    background-color: #f00;
 }
