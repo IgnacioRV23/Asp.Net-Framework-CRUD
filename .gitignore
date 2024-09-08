@@ -1,0 +1,64 @@
+# Build Folders
+bin/
+obj/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# IIS/ASP.NET logs, configuration
+logs/
+*.log
+iisexpress/
+
+# Web configuration files
+# Ignora el web.config para proteger el string de conexión
+web.config
+web.debug.config
+web.release.config
+
+# NuGet
+*.nupkg
+# Nómbras el paquete específico o ignora todos los paquetes
+packages/
+
+# Resharper
+_ReSharper*/
+*.DotSettings.user
+
+# Rider
+.idea/
+
+# Visual Studio Code
+.vscode/
+
+# NCrunch
+*.ncrunchsolution
+*.ncrunchproject
+
+# TeamCity
+_TeamCity/
+
+# DotNet Specific
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Stylesheets
+*.css.map
+
+# Backup & log files
+*.log
+*.bak
+*.swp
+*~
+
+# Ignore Visual Studio temporary files, build results, and
+# build directories in case they are committed accidentally
+$tf/
+*.vspscc
+*.vssscc
+.vscode/
+.vs/
