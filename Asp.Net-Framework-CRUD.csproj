@@ -67,22 +67,38 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Views\MainMenu.aspx" />
+    <Content Include="Views\Products.aspx" />
     <Content Include="Web.config" />
-    <Content Include="Views\WebForm1.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Model\Products.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Views\WebForm1.aspx.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
+    <Compile Include="Views\body.Master.cs">
+      <DependentUpon>body.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Views\WebForm1.aspx.designer.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
+    <Compile Include="Views\body.Master.designer.cs">
+      <DependentUpon>body.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainMenu.aspx.cs">
+      <DependentUpon>MainMenu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\MainMenu.aspx.designer.cs">
+      <DependentUpon>MainMenu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Products.aspx.cs">
+      <DependentUpon>Products.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Products.aspx.designer.cs">
+      <DependentUpon>Products.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <Content Include="Views\body.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -91,6 +107,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Content\" />
     <Folder Include="Controller\" />
   </ItemGroup>
   <PropertyGroup>
@@ -108,7 +125,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>51311</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:44364/</IISUrl>
+          <IISUrl>http://localhost:5000/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

@@ -4,17 +4,14 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using Asp.Net_Framework_CRUD.Model;
 
-namespace Asp.Net_Framework_CRUD
+namespace Asp.Net_Framework_CRUD.Views
 {
-    public partial class WebForm1 : System.Web.UI.Page
+    public partial class WebForm2 : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            Products p = new Products();
 
-            p.GetRows();
         }
     }
 }
