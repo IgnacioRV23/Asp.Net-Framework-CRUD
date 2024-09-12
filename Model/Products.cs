@@ -12,7 +12,7 @@ namespace Asp.Net_Framework_CRUD.Model
     {
         string connectionString = ConfigurationManager.ConnectionStrings["connection"].ConnectionString;
 
-        public void GetRows()
+        public DataTable GetRows()
         {
             DataTable Products = new DataTable();
 
@@ -37,6 +37,8 @@ namespace Asp.Net_Framework_CRUD.Model
                 }
             }
             catch { }
+
+            return Products;
         }
 
 
