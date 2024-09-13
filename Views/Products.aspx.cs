@@ -14,16 +14,18 @@ namespace Asp.Net_Framework_CRUD.Views
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            DataTable dt;
-
-            Products p = new Products();
-
-            dt = p.GetRows();
-
-            if (dt != null)
+            if (!IsPostBack) 
             {
+                DataTable dt;
+
+                Products p = new Products();
+
+                dt = p.GetRows();
+
                 this.gvProducts.DataSource = dt;
                 this.gvProducts.DataBind();
+
+                Session["Products"] = dt;
             }
         }
 
@@ -31,21 +33,34 @@ namespace Asp.Net_Framework_CRUD.Views
         {
             if (e.CommandName == "SelectRow")
             {
-                int id = Convert.ToInt32(e.CommandArgument);
+                DataTable dt = (DataTable)Session["Products"];
 
-                DataTable dt = (DataTable)gvProducts.DataSource;
-                DataRow[] rows = dt.Select($"ID = {id}");
-
-
-                if (rows.Length > 0)
+                if(dt != null)
                 {
-                    DataRow row = rows[0];
+                    int id = Convert.ToInt32(e.CommandArgument);
+                    DataRow[] rows = dt.Select($"ID = {id}");
+                
+                    if (rows.Length > 0)
+                    {
+                        DataRow row = rows[0];
 
-                    //txtID.Text = row["ID"].ToString();
-                    //txtName.Text = row["Name"].ToString();
-                    //txtAge.Text = row["Age"].ToString();
+                        this.txtID.Text = row["ID"].ToString();
+                        this.txtName.Text = row["Name"].ToString();
+                        this.txtDescription.Text = row["Description"].ToString();
+                        this.txtPrice.Text = row["Price"].ToString();
+                        this.txtQuantity.Text = row["Quantity"].ToString();
+                    }
                 }
             }
+        }
+
+        protected void btnCleanForm_Click(object sender, EventArgs e)
+        {
+            this.txtID.Text = "";
+            this.txtName.Text = "";
+            this.txtDescription.Text = "";
+            this.txtPrice.Text = "";
+            this.txtQuantity.Text = "";
         }
     }
 }

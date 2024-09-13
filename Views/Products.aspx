@@ -1,4 +1,4 @@
-﻿<%@ Page enableEventValidation="true" Title="" Language="C#" MasterPageFile="~/Views/body.Master" AutoEventWireup="true" CodeBehind="Products.aspx.cs" Inherits="Asp.Net_Framework_CRUD.Views.WebForm1" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/body.Master" AutoEventWireup="true" CodeBehind="Products.aspx.cs" Inherits="Asp.Net_Framework_CRUD.Views.WebForm1" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
@@ -15,7 +15,11 @@
                         <h3>Products</h3>
                     </div>
                     <div class="col">
-                        <button type="button" class="btn border-0" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <asp:LinkButton Text="text" runat="server" class="btn border-0" OnClick="btnCleanForm_Click" ID="btnCleanForm" title="Clear">
+                            <i class="bi bi-eraser-fill text-primary" style="font-size: 1.6rem;"></i>
+                        </asp:LinkButton>
+
+                        <button type="button" class="btn border-0" data-bs-toggle="modal" data-bs-target="#exampleModal" title="Search">
                             <i class="bi bi-search text-primary" style="font-size: 1.6rem;"></i>
                         </button>
                     </div>
@@ -25,18 +29,27 @@
             <div class="row card-body">
                 <div class="col">
                     <div class="mb-3">
-                        <label class="form-label">Name</label>
-                        <asp:TextBox runat="server" ID="name" CssClass="form-control" placeholder="Name" />
+                        <label class="form-label text-primary-emphasis">ID</label>
+                        <asp:TextBox runat="server" ID="txtID" CssClass="form-control" />
 
-                        <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
-                        <textarea class="form-control" id="txt" rows="3"></textarea>
+
+                        <label class="form-label text-primary-emphasis">Name</label>
+                        <asp:TextBox runat="server" ID="txtName" CssClass="form-control" />
                     </div>
                 </div>
 
                 <div class="col">
+                    <label class="form-label text-primary-emphasis">Description</label>
+                    <asp:TextBox class="form-control" ID="txtDescription" runat="server" TextMode="MultiLine" Rows="4" Columns="20"></asp:TextBox>
                 </div>
 
                 <div class="col">
+                    <label class="form-label text-primary-emphasis">Price</label>
+                    <asp:TextBox runat="server" ID="txtPrice" CssClass="form-control" />
+
+
+                    <label class="form-label text-primary-emphasis">Quantity</label>
+                    <asp:TextBox runat="server" ID="txtQuantity" CssClass="form-control" />
                 </div>
 
             </div>
@@ -70,7 +83,7 @@
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Customer List</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Products List</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -78,7 +91,7 @@
                         <Columns>
                             <asp:TemplateField>
                                 <ItemTemplate>
-                                    <asp:Button ID="SelectButton" runat="server" CommandName="SelectRow" CommandArgument='<%# Eval("ID") %>' Text="Select" />
+                                    <asp:Button class="btn btn-sm btn-outline-primary" ID="SelectButton" runat="server" CommandName="SelectRow" CommandArgument='<%# Eval("ID") %>' Text="Select" />
                                 </ItemTemplate>
                             </asp:TemplateField>
 
@@ -92,7 +105,6 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
                 </div>
             </div>
         </div>
