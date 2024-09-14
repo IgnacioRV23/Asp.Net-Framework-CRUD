@@ -15,6 +15,24 @@ namespace Asp.Net_Framework_CRUD.Views
     {
 
         /// <summary>
+        /// Control btnAddNew.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton btnAddNew;
+
+        /// <summary>
+        /// Control btnSave.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton btnSave;
+
+        /// <summary>
         /// Control btnCleanForm.
         /// </summary>
         /// <remarks>

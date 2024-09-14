@@ -15,8 +15,16 @@
                         <h3>Products</h3>
                     </div>
                     <div class="col">
-                        <asp:LinkButton Text="text" runat="server" class="btn border-0" OnClick="btnCleanForm_Click" ID="btnCleanForm" title="Clear">
-                            <i class="bi bi-eraser-fill text-primary" style="font-size: 1.6rem;"></i>
+                         <asp:LinkButton runat="server" class="btn border-0" ID="btnAddNew" title="Add new">
+                            <i class="bi bi-plus-circle-fill text-primary" style="font-size: 1.6rem;"></i>
+                        </asp:LinkButton>
+
+                        <asp:LinkButton runat="server" class="btn border-0" ID="btnSave" title="Save">
+                            <i class="bi bi-floppy-fill text-primary" style="font-size: 1.6rem;"></i>
+                        </asp:LinkButton>
+
+                        <asp:LinkButton runat="server" class="btn border-0" OnClick="btnCleanForm_Click" ID="btnCleanForm" title="Clear">
+                            <i class="bi bi-eraser-fill text-primary" style="font-size: 1.8rem;"></i>
                         </asp:LinkButton>
 
                         <button type="button" class="btn border-0" data-bs-toggle="modal" data-bs-target="#exampleModal" title="Search">
@@ -30,7 +38,7 @@
                 <div class="col">
                     <div class="mb-3">
                         <label class="form-label text-primary-emphasis">ID</label>
-                        <asp:TextBox runat="server" ID="txtID" CssClass="form-control" />
+                        <asp:TextBox runat="server" ID="txtID" CssClass="form-control" Enabled="false"/>
 
 
                         <label class="form-label text-primary-emphasis">Name</label>
@@ -54,36 +62,14 @@
 
             </div>
 
-            <div class="card-footer">
-                <div class="d-flex flex-row-reverse">
-
-                    <div class="m-1">
-                        <button class="btn btn-primary">
-                            Add New
-                        </button>
-                    </div>
-
-                    <div class="m-1">
-                        <button class="btn btn-primary">
-                            Update
-                        </button>
-                    </div>
-
-                    <div class="m-1">
-                        <button class="btn btn-primary">
-                            Delete
-                        </button>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
 
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="#ProductsListModal" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Products List</h5>
+                    <h5 class="modal-title" id="ProductsListModal">Products List</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -110,14 +96,14 @@
         </div>
     </div>
 
-
-
-
-    <script type="text/javascript">
-        function showModal() {
-            var myModal = new bootstrap.Modal(document.getElementById('myModal'));
-            myModal.show();
-            return false;
-        }
+  
+        <script type="text/javascript">
+            function showModal() {
+                var myModal = new bootstrap.Modal(document.getElementById('myModal'));
+                myModal.show();
+                return false;
+            }
     </script>
+
+
 </asp:Content>

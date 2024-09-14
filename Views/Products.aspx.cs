@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -61,6 +62,53 @@ namespace Asp.Net_Framework_CRUD.Views
             this.txtDescription.Text = "";
             this.txtPrice.Text = "";
             this.txtQuantity.Text = "";
+
+            showMessage("Success", "The form is empty correctly.", 0);
+        }
+
+        public void showMessage(string title, string text, int icon)
+        {
+            string iconType = "";
+
+            string bgColor = "";
+
+
+            switch (icon)
+            {
+                case 0:
+                    iconType = "success";
+                    break;
+                case 1:
+                    iconType = "error";
+                    break;
+                case 2:
+                    iconType = "info";
+                    break;
+                case 3:
+                    iconType = "question";
+                    break;
+                case 4:
+                    iconType = "warning";
+                    break;
+
+            }
+
+            switch (Session["Theme"])
+            {
+                case "light": 
+                    bgColor = "#fff";
+                    break;
+                case "dark":
+                    bgColor = "#212529";
+                    break;
+            }
+
+
+            string messageConfig = $"title: '{title}', text: '{text}', icon: '{iconType}', background:'{bgColor}'";
+
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "SweetAlert", "Swal.fire({"+messageConfig+"});", true);
+
+            //ScriptManager.RegisterStartupScript(this, this.GetType(), "SweetAlert", "Swal.fire('Good job!', 'You clicked the button!', 'success');", true);
         }
     }
 }
